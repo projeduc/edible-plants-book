@@ -1,4 +1,4 @@
-%    This file is part of Edible Food Book, a CC-by-sa-3.0 book.
+%    This file is part of Edible Food Book, a CC-nc-by-sa-3.0 book.
 %    Copyright (C) 2013  Abdelkrime Aries <kariminfo0@gmail.com>
 %
 %    This program is free software: you can redistribute it and/or modify
