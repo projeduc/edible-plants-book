@@ -18,135 +18,37 @@
 \usepackage[left=2.8cm,right=2.2cm,top=2.8cm,bottom=2.8cm,includefoot,includehead,headheight=13.6pt]{geometry}
 %\usepackage[utf8]{inputenc}
 %\usepackage[LAE,OT1]{fontenc}
-\usepackage{tikz}
-\usepackage{cmap}
-\usepackage{ruby}
-
+%\usepackage{tikz}
+%\usepackage{cmap}
+%\usepackage{ruby}
 %\usepackage{imakeidx}
 %\setmainlanguage[numerals=maghrib]{arabic}
 %\setotherlanguage{english}
-
-%\title{\textAR{{بعض قواعد اللغة اليابانية}}
-%\author{\textAR{عبد الكريم عريس}}
+\usepackage{lmodern}
 %\makeindex[name=fr,title=Index fr,intoc,columns=3]
 %\makeindex[name=en,title=Index en,intoc,columns=3]
 %\makeindex[name=ar,title=Index ar,intoc,columns=3]
+
+\artitle{النباتات الصالحة للأكل}
+\japtitle{食用植物(しょくよう しょくぶつ)}
+\engtitle{Edible plants}
+\frtitle{Plantes comestibles}
+
 \begin{document} % Here we go.
 \pagenumbering{gobble}
-\begin{titlepage}
-%%\hrule
-%%\vspace{3pt}
-%%\hrule
-
-\begin{tikzpicture}[remember picture,overlay]
-%  \node[anchor=north west,minimum width=21cm,minimum height=8cm,fill=blue,text=black] (RB) at (current page.north west){\Huge  \AR{النباتات الصالحة للأكل} 
-%  \jp{\ruby{食用}{しょくよう}\ruby{植物}{しょくぶつ}}
-%  };
-  \node[anchor=north west,minimum width=21cm,minimum height=8cm,fill=blue,text=black] (RB) at (current page.north west){};
-  
-  \node[anchor=north west,minimum width=17.7cm,minimum height=9cm,fill=blue] (RC) at (0,-13){}; 
-  
-  \node[anchor=north west,minimum width=17.7cm] at (-0.14cm,-3.6cm) {\includegraphics[width=17.7cm]{cover1.jpg}}; 
-  
-  \node[text=yellow,anchor=north west,minimum width=18cm] at ([shift={(2.8cm,5.5cm)}] RB.south west){
-  \hfill
-  \Huge  \AR{\textgranada{النباتات الصالحة للأكل}}
-  \hfill
-  };
-  
-  \node[text=yellow,anchor=north west,minimum width=18cm] at ([shift={(2.8cm,4cm)}] RB.south west){
-    \hfill
-    \Huge  \jp{食用植物(しょくよう しょくぶつ)}
-    \hfill
-    };
-  
-  \node[text=white,text width=4cm,anchor=north west] at ([shift={(5cm,2cm)}] RB.south west){
-  \AR{فواكه} \hfill\\
-  \AR{خضروات} \hfill\\
-  \AR{حبوب} \hfill
-  };
-  
-   \node[text=white,text width=5cm,align=right, anchor=north west] at ([shift={(14cm,2cm)}] RB.south west){\jp{果物 (くだもの) \\
-    野菜 (やさい) \\
-    穀物 (こくもつ)\\
-    }
-    };
-    
-    
-  
-  \node[text=white,text width=8cm,anchor=north west, align=right] at ([shift={(4.5cm,1.3cm)}] RC.south west){
-  2013
-  \copyright \
-  \AR{عبد الكريم عريس}
-  };
-  
-  
-   \node[text=white,text width=8cm,anchor=north west] at ([shift={(13cm,2cm)}] RC.south west){
-   \includegraphics{by-nc-sa.png}
-   };
-   
-%  \node[anchor=north west,minimum width=18.3cm,minimum height=24cm,fill=blue] (RB) at ([shift={(2.7cm,15cm)}]RB.south west){}; 
-%  
-%  \node[anchor=north west,minimum width=18.3cm,minimum height=24cm] (RB) at ([shift={(2.7cm,8cm)}]RB.south west) {\includegraphics[width=18.18cm]{cover1.jpg}}; 
-
-  
-%  \node[text=white,text width=4cm,anchor=north west] at ([shift={(0cm,2cm)}]RB.south west){\Huge  \jp{\ruby{食用}{しょくよう}\ruby{植物}{しょくぶつ}}};
-  
-  
-%  فواكه
-%  خضروات
-%  حبوب
-  
-%\node[text=white,text width=4cm,anchor=north west] at ([shift={(3cm,2cm)}]RB.south west){\emph{jdfd dfudgf djfd kdfhdf dfjdf dfjdhfi dkfdhfk dkfjd.}};
-\end{tikzpicture}
-
-%\vspace{2.9cm}
-%\begin{flushleft}
-%{\LARGE 
-%\AR{النباتات الصالحة للأكل}\\
-%\jp{\ruby{食用}{しょくよう}\ruby{植物}{しょくぶつ}}
-%}
-%\end{flushleft}
-%\hrule
-%\vspace{3pt}
-%\hrule
-%\vspace{3pt}
-%\begin{flushleft}
-%\includegraphics[width=18.18cm]{cover1.jpg}
-%\end{flushleft}
-%\vspace{1pt}
-%\hrule
-%\includegraphics[width=.1\textwidth]{logo}
-
-%\begin{tikzpicture}
-%\node[above right] (img) at (0,0) {\includegraphics[width=1.00\textwidth]{cover.jpg}};
-%\node at (10pt,50pt) {$F_N$};
-%\end{tikzpicture}
-
-
-
-
-%Rory  \\
-%{\small\em \copyright \  Draft date \today }
-\end{titlepage}
-%\maketitle
-
-\newpage
-
-
-
-\newpage
-
-\AR{فواكه}\\
-\jp{果物(くだもの)}\\
-Fruits\\
-Fruits
-
-\newpage
+\bookTitle
+%\begin{bookTitle}
+%
+%\end{bookTitle}
 
 \mainmatter
 
-
+\begin{category}
+\artitle{فواكه}
+\japtitle{果物(くだもの)}
+\engtitle{Fruits}
+\frtitle{Fruits}
+\end{category}
 
 \begin{element}
 \setimg{fruit/apple.jpg}{Abhijit Tembhekar}{CC-BY-2}
@@ -294,7 +196,7 @@ Fruits
 \end{element}
 
 \begin{element}
-\setimg{fruit/gooseberry.jpg}{Kornelia \& Hartmut Häfele}{GFDL}
+\setimg{fruit/gooseberry.jpg}{Kornelia \& Hartmut H\"afele}{GFDL}
 \artxt{عنب الثعلب}
 \japtxt{西洋すぐり(せいようすぐり)}
 \engtxt{Gooseberry}
@@ -606,13 +508,7 @@ Fruits
 \artxt{عليق أوروبي}
 \japtxt{ラズベリー}
 \engtxt{Raspberry}
-\frtxt{Framboise}%\begin{element}
-%\setimg{fruit/durian.jpg}{}{}
-%\artxt{جوز}
-%\japtxt{}
-%\engtxt{Walnut}
-%\frtxt{}
-%\end{element}
+\frtxt{Framboise}
 \end{element}
 
 \begin{element}
@@ -665,10 +561,12 @@ Fruits
 
 \newpage
 
-\AR{مكسرات}\\
-\jp{ナッツ}\\
-Nuts \\
-Fruits à coques
+\begin{category}
+\artitle{مكسرات}
+\japtitle{ナッツ}
+\engtitle{Nuts}
+\frtitle{Fruits à coques}
+\end{category}
 
 \newpage
 
@@ -771,10 +669,12 @@ Fruits à coques
 
 \newpage
 
-\AR{حبوب}\\
-\jp{穀物(こくもつ)}\\
-Cereals\\
-Céréales
+\begin{category}
+\artitle{حبوب}
+\japtitle{穀物(こくもつ)}
+\engtitle{Cereals}
+\frtitle{Céréales}
+\end{category}
 
 \newpage
 
@@ -852,11 +752,12 @@ Céréales
 
 \newpage
 
-\AR{بقوليات}\\
-\jp{豆果(とうか)}\\
-Legumes\\
-Légumineuses
-
+\begin{category}
+\artitle{بقوليات}
+\japtitle{豆果(とうか)}
+\engtitle{Legumes}
+\frtitle{Légumineuses}
+\end{category}
 \newpage
 
 \begin{element}

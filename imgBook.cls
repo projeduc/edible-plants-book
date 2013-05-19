@@ -25,6 +25,11 @@
 \RequirePackage{multirow}
 \RequirePackage{array}
 
+\RequirePackage{tikz}
+\RequirePackage{environ}
+\RequirePackage{cmap}
+\RequirePackage{ruby}
+
 
 \if@compatibility\else
 \DeclareOption{a4paper}{%
@@ -50,8 +55,12 @@
 \end{CJK} %
 }
 
-\newcounter {nmblines}
-\setcounter{nmblines}{1}
+%\newcounter {nmblines}
+%\setcounter{nmblines}{1}
+
+% Category counter
+\newcounter {catcount}
+\setcounter{catcount}{0}
 
 \newcommand\Block[1]{%
 %\setlength\fboxsep{0pt} \setlength\fboxrule{0.1pt}% delete
@@ -95,6 +104,117 @@
 \the\@frtxt
 }%
 \vfill
+}
+
+\NewEnviron{category}
+{
+
+%\if@twoside
+%  \ifodd\c@page
+%  	\hbox{}\newpage
+%  	\if@twocolumn
+%  		\hbox{}%
+%  	\newpage
+%  	\fi
+%  \fi
+%\fi
+  
+\thispagestyle{empty} 
+%\@image={ }
+\@japtxt={ }
+\@artxt={ }
+\@frtxt={ }
+\@engtxt={ }
+\addtocounter{catcount}{1}
+\BODY
+\noindent
+\begin{tikzpicture}
+
+\node[anchor=north west,minimum width=\textwidth,minimum height=4cm,fill=blue] (RB) at (current page.north west){};
+
+\node[anchor=north west,minimum width=3cm,minimum height=3cm,fill=yellow] at ([shift={(0.5cm,3.5cm)}] RB.south west){
+	\begin{minipage}[t!]{3cm}
+        \begin{center}
+        {\fontsize{60pt}{1em}\selectfont\bf \textcolor{blue}{\arabic{catcount}}}
+        \end{center}
+    \end{minipage}
+};
+
+\node[anchor=north west,minimum width=\textwidth,minimum height=8cm,fill=blue] at ([shift={(0cm,-10cm)}] RB.south west){};
+
+\node[anchor=north west,draw=red,minimum width=15cm, minimum height=8cm,fill=red!80, very thick, rectangle, rounded corners, inner sep=10pt, inner ysep=20pt, rotate=10] at ([shift={(0cm,-4cm)}] RB.south west){
+	\begin{minipage}[t!]{14cm}
+        \begin{center}
+        \the\@artxt \\
+        \the\@japtxt \\
+        \the\@engtxt \\
+        \the\@frtxt
+        \end{center}
+    \end{minipage}
+};
+\end{tikzpicture}
+
+%\newpage\hbox{}
+\addtocounter{page}{-1}
+}
+
+\newcommand{\bookTitle}
+{
+
+\begin{titlepage}
+%%\hrule
+%%\vspace{3pt}
+%%\hrule
+
+\begin{tikzpicture}[remember picture,overlay]
+
+  \node[anchor=north west,minimum width=21cm,minimum height=8cm,fill=blue,text=black] (RB) at (current page.north west){};
+  
+  \node[anchor=north west,minimum width=17.7cm,minimum height=9cm,fill=blue] (RC) at (0,-13){}; 
+  
+  \node[anchor=north west,minimum width=17.7cm] at (-0.14cm,-3.6cm) {\includegraphics[width=17.7cm]{cover1.jpg}}; 
+  
+  \node[text=yellow,anchor=north west,minimum width=18cm] at ([shift={(2.8cm,5.5cm)}] RB.south west){
+  \hfill
+  \the\@artxt
+  \hfill
+  };
+  
+  \node[text=yellow,anchor=north west,minimum width=18cm] at ([shift={(2.8cm,4cm)}] RB.south west){
+  \hfill
+  \the\@japtxt
+  \hfill
+  };
+    
+  \node[text=yellow,anchor=north west,minimum width=18cm] at ([shift={(2.8cm,3cm)}] RB.south west){
+  \hfill
+  \the\@engtxt
+  \hfill
+  };
+  
+  \node[text=yellow,anchor=north west,minimum width=18cm] at ([shift={(2.8cm,2cm)}] RB.south west){
+    \hfill
+    \the\@frtxt
+    \hfill
+    };
+    
+  \node[text=white,text width=8cm,anchor=north west, align=right] at ([shift={(4.5cm,1.8cm)}] RC.south west){
+  2013
+  \copyright \
+  \AR{عبد الكريم عريس}
+  };
+  
+  \node[text=white,text width=8cm,anchor=north west, align=right] at ([shift={(4.5cm,1.2cm)}] RC.south west){
+  2013
+  \copyright \ Abdelkrime Aries
+    };
+    
+   \node[text=white,text width=8cm,anchor=north west] at ([shift={(13cm,2cm)}] RC.south west){
+   \includegraphics{by-nc-sa.png}
+   };
+\end{tikzpicture}
+
+\end{titlepage}
 }
 
 \newread\tempread
@@ -154,12 +274,22 @@
 {
 \@artxt={[AR] \AR{\textcortoba{#1}}\\}
 %\index[ar]{#1}
+}
 
+\newcommand{\artitle}[1]
+{
+\@artxt={\Huge  \AR{\textgranada{#1}}}
+%\index[ar]{#1}
 }
 
 \newcommand{\japtxt}[1]
 {
 \@japtxt={[JP] \jp{#1}\\}
+}
+
+\newcommand{\japtitle}[1]
+{
+\@japtxt={\Huge \jp{#1}}
 }
 
 \newcommand{\engtxt}[1]
@@ -168,8 +298,19 @@
 %\index[en]{#1}
 }
 
+\newcommand{\engtitle}[1]
+{
+\@engtxt={\Huge #1}
+}
+
 \newcommand{\frtxt}[1]
 {
 \@frtxt={[FR] #1\\}
+%\index[fr]{#1}
+}
+
+\newcommand{\frtitle}[1]
+{
+\@frtxt={\Huge #1}
 %\index[fr]{#1}
 }
