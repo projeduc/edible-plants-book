@@ -118,17 +118,21 @@
 %  	\fi
 %  \fi
 %\fi
-  
-\thispagestyle{empty} 
+\newpage
 %\@image={ }
 \@japtxt={ }
 \@artxt={ }
 \@frtxt={ }
 \@engtxt={ }
 \addtocounter{catcount}{1}
+\thispagestyle{empty} 
+
 \BODY
+
 \noindent
 \begin{tikzpicture}
+\addref
+\renewcommand{\addref}{}
 
 \node[anchor=north west,minimum width=\textwidth,minimum height=4cm,fill=blue] (RB) at (current page.north west){};
 
@@ -155,7 +159,7 @@
 \end{tikzpicture}
 
 %\newpage\hbox{}
-\addtocounter{page}{-1}
+%\addtocounter{page}{-1}
 }
 
 \newcommand{\bookTitle}
@@ -313,4 +317,17 @@
 {
 \@frtxt={\Huge #1}
 %\index[fr]{#1}
+}
+
+
+\newcommand{\addref}{}
+%----------------------------------
+
+\renewcommand{\chapter}[1]{
+\renewcommand{\addref}{
+\phantomsection
+%\addcontentsline{toc}{chapter}{\arabic{catcount} - \the\@chaptitle}
+\addcontentsline{toc}{chapter}{#1}
+}
+
 }
