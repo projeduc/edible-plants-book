@@ -75,6 +75,8 @@
 
 \newtoks\@image
 \@image={}
+\newtoks\@imgdir
+\@imgdir={}
 \newtoks\@artxt
 \@artxt={}
 \newtoks\@japtxt
@@ -124,6 +126,7 @@
 \@artxt={ }
 \@frtxt={ }
 \@engtxt={ }
+\@imgdir={ }
 \addtocounter{catcount}{1}
 \thispagestyle{empty} 
 
@@ -234,11 +237,18 @@
 
 %\newif\iffirst\firsttrue
 
+
+
+\newcommand{\imgdir}[1]
+{
+\@imgdir={#1}
+}
+
 \newcommand{\setimg}[3]
 {
 
-\IfFileExists{#1}{
- \@image={\includegraphics[width=6.5cm]{#1}} %
+\IfFileExists{\the\@imgdir #1}{
+ \@image={\includegraphics[width=6.5cm]{\the\@imgdir #1}} %
  \write\tempfile{#2}
  }{
  \@image={No image} %
