@@ -75,6 +75,8 @@
 
 \newtoks\@image
 \@image={}
+\newtoks\@licenceimg
+\@licenceimg={}
 \newtoks\@imgdir
 \@imgdir={}
 \newtoks\@artxt
@@ -179,7 +181,7 @@
   
   \node[anchor=north west,minimum width=17.7cm,minimum height=9cm,fill=blue] (RC) at (0,-13){}; 
   
-  \node[anchor=north west,minimum width=17.7cm] at (-0.14cm,-3.6cm) {\includegraphics[width=17.7cm]{cover1.jpg}}; 
+  \node[anchor=north west,minimum width=17.7cm] at (-0.14cm,-3.6cm) {\the\@image}; 
   
   \node[text=yellow,anchor=north west,minimum width=18cm] at ([shift={(2.8cm,5.5cm)}] RB.south west){
   \hfill
@@ -217,7 +219,7 @@
     };
     
    \node[text=white,text width=8cm,anchor=north west] at ([shift={(13cm,2cm)}] RC.south west){
-   \includegraphics{by-nc-sa.png}
+   \the\@licenceimg
    };
 \end{tikzpicture}
 
@@ -263,6 +265,30 @@
 %\immediate\closeout\tempfile
 %image creator name #2
 %image licence #3
+}
+
+\newcommand{\bookimg}[3]
+{
+
+\IfFileExists{#1}{
+ \@image={\includegraphics[width=17.7cm]{#1}} %
+ \write\tempfile{#2}
+ }{
+ \@image={} %
+ }
+ 
+}
+
+\newcommand{\licenceimg}[3]
+{
+
+\IfFileExists{#1}{
+ \@licenceimg={\includegraphics{#1}} %
+ \write\tempfile{#2}
+ }{
+ \@licenceimg={} %
+ }
+ 
 }
 
 \newcommand{\authorsthanks}{%
