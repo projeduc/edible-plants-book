@@ -181,7 +181,7 @@
   
   \node[anchor=north west,minimum width=17.7cm,minimum height=9cm,fill=blue] (RC) at (0,-13){}; 
   
-  \node[anchor=north west,minimum width=17.7cm] at (-0.14cm,-3.6cm) {\the\@image}; 
+  \node[anchor=north west,minimum width=17.7cm] at (0cm,-4.6cm) {\the\@image}; 
   
   \node[text=yellow,anchor=north west,minimum width=18cm] at ([shift={(2.8cm,5.5cm)}] RB.south west){
   \hfill
