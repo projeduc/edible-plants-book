@@ -30,6 +30,11 @@
 %\makeindex[name=ar,title=Index ar,intoc,columns=3]
 \usepackage[a4paper,pagebackref,hyperindex=true]{hyperref}
 
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+}
+
 \artitle{النباتات الصالحة للأكل}
 \japtitle{食用植物(しょくよう しょくぶつ)}
 \engtitle{Edible plants}
@@ -1562,9 +1567,11 @@
 %\printindex[ar]
 %}
 
-\backmatter
+%\backmatter
+\pagenumbering{gobble}
 
 \newpage
+\hrule
 Pictures' credits:\\
 \authorsthanks
 
