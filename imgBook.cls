@@ -30,6 +30,8 @@
 \RequirePackage{cmap}
 \RequirePackage{ruby}
 
+\RequirePackage{fancyhdr} 
+
 
 \if@compatibility\else
 \DeclareOption{a4paper}{%
@@ -64,12 +66,12 @@
 
 \newcommand\Block[1]{%
 %\setlength\fboxsep{0pt} \setlength\fboxrule{0.1pt}% delete
-%\mbox{ delete
+%\mbox{ %delete
 \begin{minipage}[c][\dimexpr0.3333333\textheight-2pt\relax][c]{\dimexpr.5\textwidth-10pt\relax}
 \centering
 #1
 \end{minipage}%
-  %} delete
+%  } %delete
 }
 
 
@@ -100,6 +102,7 @@
 }
 {
 \noindent
+%\hrule
 \Block{\the\@image}\hfill%
 \Block{
 \the\@artxt
@@ -122,7 +125,9 @@
 %  	\fi
 %  \fi
 %\fi
-\newpage
+%\newpage
+\cleardoublepage
+
 %\@image={ }
 \@japtxt={ }
 \@artxt={ }
@@ -165,6 +170,7 @@
 
 %\newpage\hbox{}
 %\addtocounter{page}{-1}
+
 }
 
 \newcommand{\bookTitle}
@@ -177,31 +183,31 @@
 
 \begin{tikzpicture}[remember picture,overlay]
 
-  \node[anchor=north west,minimum width=21cm,minimum height=8cm,fill=blue,text=black] (RB) at (current page.north west){};
+  \node[anchor=north west,minimum width=\textwidth + 2.5cm,minimum height=8cm,fill=blue,text=black] (RB) at (current page.north west){};
   
-  \node[anchor=north west,minimum width=17.7cm,minimum height=9cm,fill=blue] (RC) at (0,-13){}; 
+  \node[anchor=north west,minimum width=\textwidth,minimum height=10cm,fill=blue] (RC) at ([shift={(2.5cm,-9cm)}] RB.south west){}; 
   
-  \node[anchor=north west,minimum width=17.7cm] at (0cm,-4.6cm) {\the\@image}; 
+  \node[anchor=north west,minimum width=\textwidth] at ([shift={(2.4cm,0.15cm)}] RB.south west) {\the\@image}; 
   
-  \node[text=yellow,anchor=north west,minimum width=18cm] at ([shift={(2.8cm,5.5cm)}] RB.south west){
+  \node[text=yellow,anchor=north west,minimum width=\textwidth] at ([shift={(2.5cm,5.5cm)}] RB.south west){
   \hfill
   \the\@artxt
   \hfill
   };
   
-  \node[text=yellow,anchor=north west,minimum width=18cm] at ([shift={(2.8cm,4cm)}] RB.south west){
+  \node[text=yellow,anchor=north west,minimum width=\textwidth] at ([shift={(2.5cm,4cm)}] RB.south west){
   \hfill
   \the\@japtxt
   \hfill
   };
     
-  \node[text=yellow,anchor=north west,minimum width=18cm] at ([shift={(2.8cm,3cm)}] RB.south west){
+  \node[text=yellow,anchor=north west,minimum width=18cm] at ([shift={(2.5cm,3cm)}] RB.south west){
   \hfill
   \the\@engtxt
   \hfill
   };
   
-  \node[text=yellow,anchor=north west,minimum width=18cm] at ([shift={(2.8cm,2cm)}] RB.south west){
+  \node[text=yellow,anchor=north west,minimum width=18cm] at ([shift={(2.5cm,2cm)}] RB.south west){
     \hfill
     \the\@frtxt
     \hfill
@@ -224,6 +230,7 @@
 \end{tikzpicture}
 
 \end{titlepage}
+\cleardoublepage
 }
 
 \newread\tempread
@@ -271,7 +278,7 @@
 {
 
 \IfFileExists{#1}{
- \@image={\includegraphics[width=17.7cm]{#1}} %
+ \@image={\noindent\includegraphics[width=\textwidth]{#1}} %
  \write\tempfile{#2}
  }{
  \@image={} %
@@ -366,4 +373,51 @@
 \addcontentsline{toc}{chapter}{#1}
 }
 
+}
+
+
+
+%============================FRONTMATTER
+
+\renewcommand{\frontmatter}{
+\pagenumbering{gobble}
+%\fancyfoot{} 
+%\fancyhead{} 
+}
+
+%\fancypagestyle{plain}{
+%  \fancyhead{}
+%  \fancyfoot{}
+%  \renewcommand{\headrulewidth}{0pt}
+%}
+
+%==========================MAINMATTER
+
+\renewcommand{\mainmatter}{
+
+\cleardoublepage
+
+\pagenumbering{arabic}
+
+\pagestyle{fancy}                       % Sets fancy header and footer
+\fancyfoot{}                            % Delete current footer settings
+\renewcommand{\headrulewidth}{0pt}
+
+\fancyhead[E]{
+\begin{tikzpicture}[remember picture,overlay,shift={(current page.north west)}]
+        \node[anchor=north west, minimum width=\textwidth+1.5cm, minimum height=1cm,fill=red] at (0,0){};
+        \node[anchor=east,xshift=.1\textwidth+1.5cm, yshift=-1cm,rectangle, rounded corners=10pt,minimum width=2cm, inner sep=6pt, fill=blue]
+              {\large \color{white}\thepage};
+\end{tikzpicture}
+} 
+
+\fancyhead[O]{
+\begin{tikzpicture}[remember picture,overlay,shift={(current page.north west)}]
+\begin{scope}[xshift= 2.5cm]
+ \node[anchor=north west, minimum width=\textwidth+1.5cm, minimum height=1cm,fill=red] at (0,0){};
+        \node[anchor=west,xshift=.9\textwidth, yshift=-1cm,rectangle, rounded corners=10pt,minimum width=2cm, inner sep=6pt, fill=blue]
+              {\large \color{white}\thepage};
+\end{scope}
+\end{tikzpicture}
+} 
 }
