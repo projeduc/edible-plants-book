@@ -16,7 +16,7 @@
 
 \NeedsTeXFormat{LaTeX2e} %[2009/09/24]
 \ProvidesClass{imgBook}[2013/02/15 Create an image book]
-\LoadClass{book}
+\LoadClass[12pt]{book}
 
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[arabic,french,english]{babel}
@@ -180,7 +180,7 @@
 %%\hrule
 %%\vspace{3pt}
 %%\hrule
-
+\addcontentsline{toc}{part}{\the\@engtxt}
 \begin{tikzpicture}[remember picture,overlay]
 
   \node[anchor=north west,minimum width=\textwidth + 2.5cm,minimum height=8cm,fill=blue,text=black] (RB) at (current page.north west){};
@@ -233,15 +233,28 @@
 \cleardoublepage
 }
 
-\newread\tempread
-\immediate\newwrite\tempfile
+
+\immediate\newwrite\auttable
 
 \AtBeginDocument{%
-\openout\tempfile=\jobname.aut
+\openout\auttable=authors.tex
+
+\write\auttable{\@backslashchar begin{longtable}{lll}}
+\write\auttable{\@backslashchar textbf{\@backslashchar Large image} & \@backslashchar textbf{\@backslashchar Large owner} & \@backslashchar textbf{\@backslashchar Large License} \@backslashchar\@backslashchar}
+%\write\auttable{\@backslashchar endhead}
 }
 
 \AtEndDocument{%
-\immediate\closeout\tempfile
+\immediate\closeout\auttable
+}
+
+\newcommand{\writeinfo}[3]{
+\write\auttable{#1 & #2 & #3 \@backslashchar\@backslashchar}
+}
+
+\newcommand{\writecatinfo}[1]{
+\write\auttable{&& \@backslashchar\@backslashchar}
+\write\auttable{\@backslashchar multicolumn{3}{l}{#1} \@backslashchar\@backslashchar\@backslashchar hline}
 }
 
 %\newif\iffirst\firsttrue
@@ -255,35 +268,23 @@
 
 \newcommand{\setimg}[3]
 {
-
 \IfFileExists{\the\@imgdir #1}{
  \@image={\includegraphics[width=6.5cm]{\the\@imgdir #1}} %
- \write\tempfile{#2}
+  \writeinfo{#1}{#2}{#3}
  }{
  \@image={No image} %
  }
-
-%\iffirst
-%\openout\tempfile=\jobname.aut
-%\firstfalse
-%\fi
-
-
-%\immediate\closeout\tempfile
-%image creator name #2
-%image licence #3
 }
+
+
 
 \newcommand{\bookimg}[3]
 {
-
 \IfFileExists{#1}{
- \@image={\noindent\includegraphics[width=\textwidth]{#1}} %
- \write\tempfile{#2}
+ \@image={\noindent\includegraphics[width=\textwidth]{#1}  \writeinfo{cover.jpg}{#2}{#3}} %
  }{
  \@image={} %
  }
- 
 }
 
 \newcommand{\licenceimg}[3]
@@ -291,7 +292,6 @@
 
 \IfFileExists{#1}{
  \@licenceimg={\includegraphics{#1}} %
- \write\tempfile{#2}
  }{
  \@licenceimg={} %
  }
@@ -299,21 +299,16 @@
 }
 
 \newcommand{\authorsthanks}{%
-  \immediate\closeout\tempfile
+  \immediate\write\auttable{\@backslashchar end{longtable}}
+  \immediate\closeout\auttable
+  \hrule
+  \begin{flushright}
+  {\huge Pictures' credits:}
+  \end{flushright}
+  \vspace{1cm}
   
-  %\def\oneline{}%
-
-%  \openin\tempread=img.aut
-  \openin\tempread=\jobname.aut
-
-  \loop
-    \read\tempread to \oneline
-    \unless\ifeof\tempread%
-    \oneline, 
-  \repeat
-  
-  \closein\tempread
-%  \immediate\openout\arqEscreveSiglas=\jobname.losg
+  \noindent
+ \input{authors}
 }
 
 
@@ -371,6 +366,7 @@
 \phantomsection
 %\addcontentsline{toc}{chapter}{\arabic{catcount} - \the\@chaptitle}
 \addcontentsline{toc}{chapter}{#1}
+\writecatinfo{#1}
 }
 
 }
@@ -380,7 +376,8 @@
 %============================FRONTMATTER
 
 \renewcommand{\frontmatter}{
-\pagenumbering{gobble}
+\pagenumbering{roman}
+\pagestyle{empty}
 %\fancyfoot{} 
 %\fancyhead{} 
 }
@@ -392,6 +389,7 @@
 %}
 
 %==========================MAINMATTER
+
 
 \renewcommand{\mainmatter}{
 
@@ -420,4 +418,11 @@
 \end{scope}
 \end{tikzpicture}
 } 
+}
+
+%=========Backmatter
+\renewcommand{\backmatter}{
+\cleardoublepage
+\pagestyle{empty} 
+%\pagenumbering{roman}
 }
