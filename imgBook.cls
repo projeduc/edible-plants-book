@@ -1,4 +1,4 @@
-%    This file is part of Edible Food Book, a CC-nc-by-sa-3.0 book.
+%    This file is part of Edible Food Book, a CC-BY-SA-3.0 book.
 %    Copyright (C) 2013  Abdelkrime Aries <kariminfo0@gmail.com>
 %
 %    This program is free software: you can redistribute it and/or modify
@@ -29,8 +29,11 @@
 \RequirePackage{environ}
 \RequirePackage{cmap}
 \RequirePackage{ruby}
+\RequirePackage{xstring}
 
 \RequirePackage{fancyhdr} 
+
+%\RequirePackage{verbatim} 
 
 
 \if@compatibility\else
@@ -57,6 +60,15 @@
 \end{CJK} %
 }
 
+%\newcommand{\ar}[1]{ %
+%\beginR
+%{
+%\begin{otherlanguage}{arabic} %
+%#1
+%\end{otherlanguage} % 
+%}
+%\endR
+%}
 %\newcounter {nmblines}
 %\setcounter{nmblines}{1}
 
@@ -105,10 +117,12 @@
 %\hrule
 \Block{\the\@image}\hfill%
 \Block{
+\begin{flushleft}
 \the\@artxt
 \the\@japtxt
 \the\@engtxt
 \the\@frtxt
+\end{flushleft}
 }%
 \vfill
 }
@@ -180,7 +194,8 @@
 %%\hrule
 %%\vspace{3pt}
 %%\hrule
-\addcontentsline{toc}{part}{\the\@engtxt}
+\phantomsection
+\addcontentsline{toc}{part}{Book Cover}
 \begin{tikzpicture}[remember picture,overlay]
 
   \node[anchor=north west,minimum width=\textwidth + 2.5cm,minimum height=8cm,fill=blue,text=black] (RB) at (current page.north west){};
@@ -235,12 +250,15 @@
 
 
 \immediate\newwrite\auttable
+\immediate\newwrite\imgcopy
+
 
 \AtBeginDocument{%
 \openout\auttable=authors.tex
+\openout\imgcopy=LICENSE.img
 
-\write\auttable{\@backslashchar begin{longtable}{lll}}
-\write\auttable{\@backslashchar textbf{\@backslashchar Large image} & \@backslashchar textbf{\@backslashchar Large owner} & \@backslashchar textbf{\@backslashchar Large License} \@backslashchar\@backslashchar}
+\write\auttable{\@backslashchar begin{longtable}{llp{10cm}}}
+\write\auttable{\@backslashchar textbf{\@backslashchar Large image} & \@backslashchar textbf{\@backslashchar Large owner}  & \@backslashchar textbf{\@backslashchar Large More info} \@backslashchar\@backslashchar}
 %\write\auttable{\@backslashchar endhead}
 }
 
@@ -248,13 +266,36 @@
 \immediate\closeout\auttable
 }
 
-\newcommand{\writeinfo}[3]{
-\write\auttable{#1 & #2 & #3 \@backslashchar\@backslashchar}
+\newcommand{\writeinfo}[4]{
+\write\auttable{#1 & #2  & \@backslashchar getalllinks{#4} \@backslashchar\@backslashchar}
+\write\imgcopy{\the\@imgdir #1 & #2  & #3 & #4}
 }
+
+\def\getalllinks#1{%
+    \begingroup
+    \edef\@tempa{#1+}%
+    \expandafter\endgroup
+    \expandafter\readlinks\@tempa\relax
+}
+
+\def\readlinks#1+#2\relax{%
+      \dourl{#1}%  #1 = substr, #2 = rest of string
+      \begingroup
+      \ifx\relax#2\relax  % is #2 empty?
+         \def\next{\endgroup\endtestlinks}% your own end-macro if required
+      \else
+         \def\next{\endgroup\newline\readlinks#2\relax}%
+      \fi
+      \next
+}
+\def\dourl#1{\url{http://commons.wikimedia.org/wiki/File:#1}}
+\def\endtestlinks{}
+%\def\returntoline{\newline}
 
 \newcommand{\writecatinfo}[1]{
 \write\auttable{&& \@backslashchar\@backslashchar}
 \write\auttable{\@backslashchar multicolumn{3}{l}{#1} \@backslashchar\@backslashchar\@backslashchar hline}
+\write\auttable{&& \@backslashchar\@backslashchar}
 }
 
 %\newif\iffirst\firsttrue
@@ -266,11 +307,11 @@
 \@imgdir={#1}
 }
 
-\newcommand{\setimg}[3]
+\newcommand{\setimg}[4]
 {
 \IfFileExists{\the\@imgdir #1}{
  \@image={\includegraphics[width=6.5cm]{\the\@imgdir #1}} %
-  \writeinfo{#1}{#2}{#3}
+  \writeinfo{#1}{#2}{#3}{#4}
  }{
  \@image={No image} %
  }
@@ -278,10 +319,12 @@
 
 
 
-\newcommand{\bookimg}[3]
+\newcommand{\bookimg}[4]
 {
 \IfFileExists{#1}{
- \@image={\noindent\includegraphics[width=\textwidth]{#1}  \writeinfo{cover.jpg}{#2}{#3}} %
+%\hyperlink{#4}
+%\protect\detokenize{#4}
+ \@image={\noindent\includegraphics[width=\textwidth]{#1}  \writeinfo{cover.jpg}{#2}{#3}{#4}} %
  }{
  \@image={} %
  }
@@ -302,8 +345,10 @@
   \immediate\write\auttable{\@backslashchar end{longtable}}
   \immediate\closeout\auttable
   \hrule
+  \phantomsection
+  \addcontentsline{toc}{part}{Pictures' Credits}
   \begin{flushright}
-  {\huge Pictures' credits:}
+  {\huge \textbf{Pictures' Credits}}
   \end{flushright}
   \vspace{1cm}
   
@@ -371,8 +416,6 @@
 
 }
 
-
-
 %============================FRONTMATTER
 
 \renewcommand{\frontmatter}{
@@ -405,7 +448,7 @@
 \begin{tikzpicture}[remember picture,overlay,shift={(current page.north west)}]
         \node[anchor=north west, minimum width=\textwidth+1.5cm, minimum height=1cm,fill=red] at (0,0){};
         \node[anchor=east,xshift=.1\textwidth+1.5cm, yshift=-1cm,rectangle, rounded corners=10pt,minimum width=2cm, inner sep=6pt, fill=blue]
-              {\large \color{white}\thepage};
+              {\large \color{white}\textbf{\thepage}};
 \end{tikzpicture}
 } 
 
@@ -414,10 +457,13 @@
 \begin{scope}[xshift= 2.5cm]
  \node[anchor=north west, minimum width=\textwidth+1.5cm, minimum height=1cm,fill=red] at (0,0){};
         \node[anchor=west,xshift=.9\textwidth, yshift=-1cm,rectangle, rounded corners=10pt,minimum width=2cm, inner sep=6pt, fill=blue]
-              {\large \color{white}\thepage};
+              {\large \color{white}\textbf{\thepage}};
 \end{scope}
 \end{tikzpicture}
 } 
+
+\phantomsection
+\addcontentsline{toc}{part}{Edible Plants}
 }
 
 %=========Backmatter
@@ -426,3 +472,17 @@
 \pagestyle{empty} 
 %\pagenumbering{roman}
 }
+
+
+\makeatletter
+\renewcommand\tableofcontents{%
+\hrule
+\phantomsection
+\addcontentsline{toc}{part}{Table of Content}
+\begin{flushright}
+{\huge \textbf{Table of Content}}
+\end{flushright}
+\vspace{1cm}
+    \@starttoc{toc}%
+}
+\makeatother

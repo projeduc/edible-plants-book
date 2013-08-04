@@ -1,4 +1,4 @@
-%    This file is part of Edible Food Book, a CC-nc-by-sa-3.0 book.
+%    This file is part of Edible Food Book, a CC-BY-SA-3.0 book.
 %    Copyright (C) 2013  Abdelkrime Aries <kariminfo0@gmail.com>
 %
 %    This program is free software: you can redistribute it and/or modify
@@ -25,6 +25,8 @@
 %\setmainlanguage[numerals=maghrib]{arabic}
 %\setotherlanguage{english}
 \usepackage{lmodern}
+
+\usepackage{longtable}
 %\makeindex[name=fr,title=Index fr,intoc,columns=3]
 %\makeindex[name=en,title=Index en,intoc,columns=3]
 %\makeindex[name=ar,title=Index ar,intoc,columns=3]
@@ -35,20 +37,25 @@
     pdfborder={0 0 0},
 }
 
-
+%http://commons.wikimedia.org/wiki/File:
 \artitle{النباتات الصالحة للأكل}
 \japtitle{食用植物(しょくよう しょくぶつ)}
 \engtitle{Edible plants}
 \frtitle{Plantes comestibles}
-\bookimg{img/cover.jpg}{}{}
-\licenceimg{img/by-nc-sa.png}{}{}
+\bookimg{img/cover.jpg}{\href{http://commons.wikimedia.org/wiki/User:Takeaway}{Takeaway}}{cc-by-sa-3.0}{Thai_market_vegetables_01.jpg}
+\licenceimg{img/by-sa.png}{}{}
 
 \begin{document} % Here we go.
 
 \frontmatter
+
 \bookTitle
 
 \input{copyright}
+
+\cleardoublepage
+\tableofcontents
+\input{preface}
 
 \mainmatter
 \chapter{Fruits}
@@ -61,7 +68,7 @@
 \imgdir{plants/fruit/}
 
 \begin{element}
-\setimg{apple.jpg}{Abhijit Tembhekar}{CC-BY-2} %http://www.flickr.com/people/24340456@N03
+\setimg{apple.jpg}{\href{http://www.flickr.com/people/24340456@N03}{Abhijit Tembhekar}}{cc-by-2.0}{Red_Apple.jpg} %
 \artxt{تفاح}
 \japtxt{林檎(りんご)}
 \engtxt{Apple}
@@ -69,7 +76,7 @@
 \end{element}
 
 \begin{element}
-\setimg{apricot.jpg}{Geierunited}{CC-BY-SA-3} %http://commons.wikimedia.org/wiki/User:Geierunited
+\setimg{apricot.jpg}{\href{http://commons.wikimedia.org/wiki/User:Geierunited}{Geierunited}}{cc-by-sa-3.0}{Apricot_fruit.jpg} % %
 \artxt{مشمش}
 \japtxt{杏(あんず)}
 \engtxt{Apricot}
@@ -77,7 +84,7 @@
 \end{element}
 
 \begin{element}
-\setimg{arbutus.jpg}{Mercurywoodrose}{CC-BY-SA-3} %
+\setimg{arbutus.jpg}{\href{http://commons.wikimedia.org/wiki/User:Mercurywoodrose}{Mercurywoodrose}}{cc-by-sa-3.0}{Closeuptreenearbridgeatnilesrivercalifornia.JPG} % 
 \artxt{قطلب}
 \japtxt{アービュタス}
 \engtxt{Arbutus}
@@ -85,7 +92,7 @@
 \end{element}
 
 \begin{element}
-\setimg{avocado.jpg}{Marco.Finke}{CC-BY-SA-3}
+\setimg{avocado.jpg}{\href{http://commons.wikimedia.org/wiki/User:Marco.Finke}{Marco.Finke}}{cc-by-sa-3.0}{Persea_americana_2.jpg}
 \artxt{أفوكادو}
 \japtxt{アボカド}
 \engtxt{Avocado}
@@ -93,7 +100,7 @@
 \end{element}
 
 \begin{element}
-\setimg{banana.jpg}{Carschten}{public}
+\setimg{banana.jpg}{\href{http://commons.wikimedia.org/wiki/User:Carschten}{Carschten}}{public}{Bananen.jpg}
 \artxt{موز}
 \japtxt{バナナ}
 \engtxt{Banana}
@@ -101,7 +108,7 @@
 \end{element}
 
 \begin{element}
-\setimg{blackberry.jpg}{Fir0002/Flagstaffotos}{CC-BY-SA-3}
+\setimg{blackberry.jpg}{\href{http://www.flagstaffotos.com.au}{Fir0002/Flagstaffotos}}{cc-by-sa-3.0}{Blackberry_fruits.jpg}
 \artxt{توت العليق}
 \japtxt{ブラックベリー}
 \engtxt{Blackberry}
@@ -109,7 +116,7 @@
 \end{element}
 
 \begin{element}
-\setimg{blueberry.jpg}{PhreddieH3}{public}
+\setimg{blueberry.jpg}{\href{http://en.wikipedia.org/wiki/User:PhreddieH3}{PhreddieH3}}{public}{PattsBlueberries.jpg}
 \artxt{التوت الأزرق}
 \japtxt{ブルーベリー}
 \engtxt{Blueberry}
@@ -117,7 +124,7 @@
 \end{element}
 
 \begin{element}
-\setimg{cantaloupe.jpg}{Piotr Kuczy\'{n}ski}{GFDL}
+\setimg{cantaloupe.jpg}{\href{http://commons.wikimedia.org/wiki/User:Pkuczynski}{Piotr Kuczy\'{n}ski}}{gfdl}{Cucumis_melo_1_(Piotr_Kuczynski).jpg}
 \artxt{شمام}
 \japtxt{カンタロープ}
 \engtxt{Cantaloupe}
@@ -125,7 +132,7 @@
 \end{element}
 
 \begin{element}
-\setimg{carambola.jpg}{Mailamal}{CC-BY-SA-3}
+\setimg{carambola.jpg}{Mailamal}{cc-by-sa-3.0}{Averrhoa_carambola_Fruit.JPG}
 \artxt{كارامبولا}
 \japtxt{スターフルーツ}
 \engtxt{Carambola}
@@ -133,7 +140,7 @@
 \end{element}
 
 \begin{element}
-\setimg{cherry.jpg}{4028mdk09}{CC-BY-SA-3}
+\setimg{cherry.jpg}{\href{http://commons.wikimedia.org/wiki/User:4028mdk09}{4028mdk09}}{cc-by-sa-3.0}{Italienische_S\%C3\%BC\%C3\%9Fkirschen.JPG}
 \artxt{كرز}
 \japtxt{さくらんぼ}
 \engtxt{Cherry}
@@ -141,7 +148,7 @@
 \end{element}
 
 \begin{element}
-\setimg{citron.jpg}{Klaus Reger}{GFDL}
+\setimg{citron.jpg}{\href{http://de.wikipedia.org/wiki/Benutzer:K_reger}{Klaus Reger}}{gfdl}{Citrus_medicus_fruit.jpg}
 \artxt{أترج}
 \japtxt{シトロン}
 \engtxt{Citron}
@@ -149,7 +156,7 @@
 \end{element}
 
 \begin{element}
-\setimg{coconut.jpg}{EJavanainen}{public}
+\setimg{coconut.jpg}{\href{http://commons.wikimedia.org/wiki/User:EJavanainen}{EJavanainen}}{public}{Coconut.png}
 \artxt{جوز الهند}
 \japtxt{ココナッツ}
 \engtxt{Coconut}
@@ -157,7 +164,7 @@
 \end{element}
 
 \begin{element}
-\setimg{date.jpg}{M. Dhifallah}{CC-BY-SA-3}
+\setimg{date.jpg}{\href{http://commons.wikimedia.org/wiki/User:\%D9\%85_\%D8\%B6}{M. Dhifallah}}{cc-by-sa-3.0}{Dattes_deglet.JPG}
 \artxt{تمر}
 \japtxt{デーツ}
 \engtxt{Date}
@@ -166,7 +173,7 @@
 
 
 \begin{element}
-\setimg{dragonfruit.jpg}{SMasters}{CC-BY-SA-3}
+\setimg{dragonfruit.jpg}{\href{http://commons.wikimedia.org/wiki/User:SMasters}{SMasters}}{cc-by-sa-3.0}{Pitaya_cross_section_ed2.jpg}
 \artxt{فاكهة التنين}
 \japtxt{ドラゴンフルーツ}
 \engtxt{Dragonfruit (Pitaya)}
@@ -174,7 +181,7 @@
 \end{element}
 
 \begin{element}
-\setimg{durian.jpg}{Kalai}{CC-BY-SA-3}
+\setimg{durian.jpg}{\href{http://commons.wikimedia.org/wiki/User:Kalaiarasy}{Kalai}}{cc-by-sa-3.0}{Durian.jpg}
 \artxt{دوريان}
 \japtxt{ドリアン}
 \engtxt{Durian}
@@ -182,7 +189,7 @@
 \end{element}
 
 \begin{element}
-\setimg{elderberry.jpg}{Edal Anton Lefterov}{CC-BY-SA-3}
+\setimg{elderberry.jpg}{\href{http://commons.wikimedia.org/wiki/User:Edal}{Edal Anton Lefterov}}{cc-by-sa-3.0}{Sambucus-berries.jpg}
 \artxt{خمان}
 \japtxt{ニワトコ属}
 \engtxt{Elderberry}
@@ -190,7 +197,7 @@
 \end{element}
 
 \begin{element}
-\setimg{feijoa.jpg}{ACurrie}{GFDL}
+\setimg{feijoa.jpg}{\href{http://en.wikipedia.org/wiki/user:_ACurrie}{ACurrie}}{gfdl}{Feijoa_HortResearch.jpg}
 \artxt{فيجوا}
 \japtxt{フェイジョア}
 \engtxt{Feijoa}
@@ -198,7 +205,7 @@
 \end{element}
 
 \begin{element}
-\setimg{fig.jpg}{H. Zell}{CC-BY-SA-3}
+\setimg{fig.jpg}{\href{http://commons.wikimedia.org/wiki/User:Llez}{H. Zell}}{cc-by-sa-3.0}{Ficus_carica_006.JPG}
 \artxt{تين}
 \japtxt{無花果(いちじく)}
 \engtxt{Fig}
@@ -206,7 +213,7 @@
 \end{element}
 
 \begin{element}
-\setimg{gooseberry.jpg}{Kornelia \& Hartmut H\"afele}{GFDL}
+\setimg{gooseberry.jpg}{\href{http://de.wikipedia.org/wiki/Benutzer:Factumquintus/Resonanzen}{Kornelia \& Hartmut H\"afele}}{gfdl}{Stachelbeeren.jpg}
 \artxt{عنب الثعلب}
 \japtxt{西洋すぐり(せいようすぐり)}
 \engtxt{Gooseberry}
@@ -214,24 +221,23 @@
 \end{element}
 
 \begin{element}
-\setimg{grape.jpg}{Fir0002/Flagstaffotos}{CC-BY-NC-3}
+\setimg{grape.jpg}{\href{http://www.flickr.com/photos/27164521@N00/3293445748/in/photostream/}{syvwlch}}{cc-by-2.0}{Grappe_de_mauzac_blanc_01.jpg}
 \artxt{عنب}
 \japtxt{葡萄(ぶどう)}
 \engtxt{Grape}
 \frtxt{Raisin}
 \end{element}
 
-%TODO grapefruit image
-%\begin{element}
-%\setimg{durian.jpg}{}{}
-%\artxt{ليمون هندي}
-%\japtxt{グレープフルーツ}
-%\engtxt{Grapefruit}
-%\frtxt{Pomélo}
-%\end{element}
+\begin{element}
+\setimg{grapefruit.jpg}{\href{http://commons.wikimedia.org/wiki/User:\%D7\%90}{Aleph}}{cc-by-sa-2.5}{Citrus_paradisi_(Grapefruit,_pink).jpg}
+\artxt{ليمون هندي}
+\japtxt{グレープフルーツ}
+\engtxt{Grapefruit}
+\frtxt{Pomélo}
+\end{element}
 
 \begin{element}
-\setimg{guava.jpg}{A-gi\^{a}u \& Number55}{GFDL}
+\setimg{guava.jpg}{\href{http://commons.wikimedia.org/wiki/User:A-gi\%C3\%A2u}{A-gi\^{a}u} \& \href{http://commons.wikimedia.org/wiki/User:Number55}{Number55}}{cc-by-sa-3.0}{Psidium_guajava_fruit.jpg}
 \artxt{جوافة}
 \japtxt{グアバ}
 \engtxt{Guava}
@@ -239,7 +245,7 @@
 \end{element}
 
 \begin{element}
-\setimg{hackberry.jpg}{Philmarin}{CC-BY-SA-3}
+\setimg{hackberry.jpg}{Philmarin}{cc-by-sa-3.0}{Almez-2.JPG}
 \artxt{ميس}
 \japtxt{えのきの実(み)}
 \engtxt{Hackberry}
@@ -247,7 +253,7 @@
 \end{element}
 
 \begin{element}
-\setimg{hawthorn.jpg}{Michael Wolf}{CC-BY-SA-3}
+\setimg{hawthorn.jpg}{\href{http://de.wikipedia.org/wiki/Benutzer:Michael_w}{Michael Wolf}}{cc-by-sa-3.0}{Crataegus_chrysocarpa_01.jpg}
 \artxt{زعرور}
 \japtxt{さんざし}
 \engtxt{Hawthorn}
@@ -255,7 +261,7 @@
 \end{element}
 
 \begin{element}
-\setimg{jabuticaba.jpg}{Alexandre Campolina}{CC-BY-SA-3}
+\setimg{jabuticaba.jpg}{\href{http://commons.wikimedia.org/wiki/User:Campola}{Alexandre Campolina}}{cc-by-sa-3.0}{Jabuticaba_fruto.jpg}
 \artxt{عنب برازيلي}
 \japtxt{ジャボチカバ}
 \engtxt{Jabuticaba}
@@ -263,7 +269,7 @@
 \end{element}
 
 \begin{element}
-\setimg{jackfruit.jpg}{MANOJTV}{GFDL}
+\setimg{jackfruit.jpg}{\href{http://en.wikipedia.org/wiki/User:MANOJTV}{MANOJTV}}{gfdl}{Young_Jackfruit.JPG}
 \artxt{جاكا}
 \japtxt{波羅蜜(はらみつ)}
 \engtxt{Jackfruit}
@@ -271,7 +277,7 @@
 \end{element}
 
 \begin{element}
-\setimg{kaki.jpg}{Nesnad}{CC-BY-SA-3}
+\setimg{kaki.jpg}{\href{http://commons.wikimedia.org/wiki/User:Nesnad}{Nesnad}}{cc-by-sa-3.0}{Threekakifruit-zoom.jpg}
 \artxt{كاكي}
 \japtxt{柿(かき)}
 \engtxt{Japanese Persimmon}
@@ -279,7 +285,7 @@
 \end{element}
 
 \begin{element}
-\setimg{jujube.jpg}{Tirithel}{CC-BY-SA-3}
+\setimg{jujube.jpg}{Tirithel}{cc-by-sa-3.0}{Ziziphus_zizyphus_fruit_inside.jpeg}
 \artxt{عناب}
 \japtxt{なつめ}
 \engtxt{Jujube}
@@ -287,7 +293,7 @@
 \end{element}
 
 \begin{element}
-\setimg{kiwi.jpg}{Luc Viatour}{CC-BY-SA-2.5}
+\setimg{kiwi.jpg}{\href{http://www.lucnix.be/}{Luc Viatour}}{cc-by-sa-2.5}{Kiwi_(Actinidia_chinensis)_1_Luc_Viatour.jpg}
 \artxt{فاكهة الكيوي}
 \japtxt{キウイフルーツ}
 \engtxt{Kiwifruit}
@@ -295,7 +301,7 @@
 \end{element}
 
 \begin{element}
-\setimg{kumquat.jpg}{Serg!o}{public}
+\setimg{kumquat.jpg}{\href{http://commons.wikimedia.org/wiki/User:Serg!o}{Serg!o}}{public}{Quinotos.jpg}
 \artxt{كمكوات}
 \japtxt{金柑(きんかん)}
 \engtxt{Kumquat}
@@ -303,7 +309,7 @@
 \end{element}
 
 \begin{element}
-\setimg{lemon.jpg}{Andr\'e Karwath}{CC-BY-SA-2.5}
+\setimg{lemon.jpg}{\href{http://commons.wikimedia.org/wiki/User:Aka}{Andr\'e Karwath}}{cc-by-sa-2.5}{Lemon.jpg}
 \artxt{ليمون}
 \japtxt{レモン}
 \engtxt{Lemon}
@@ -311,7 +317,7 @@
 \end{element}
 
 \begin{element}
-\setimg{lime.jpg}{NotFromUtrecht}{CC-BY-SA-3}
+\setimg{lime.jpg}{\href{http://commons.wikimedia.org/wiki/User:NotFromUtrecht}{NotFromUtrecht}}{cc-by-sa-3.0}{Limes_whole_and_halved.jpg}
 \artxt{ليم}
 \japtxt{ライム}
 \engtxt{Lime}
@@ -319,15 +325,15 @@
 \end{element}
 
 \begin{element}
-\setimg{lingonberry.jpg}{Mr. Philip Gabrielsen}{CC-BY-2.5}
+\setimg{lingonberry.jpg}{\href{https://commons.wikimedia.org/wiki/User:Flums}{Philip Gabrielsen}}{cc-by-2.5}{Tytteb\%C3\%A6r.jpg}
 \artxt{عنب الثور}
-\japtxt{コケモモ}
+\japtxt{苔桃(こけもも)}
 \engtxt{Lingonberry}
 \frtxt{Airelle rouge}
 \end{element}
 
 \begin{element}
-\setimg{longan.jpg}{Nelson Ramos-Lopes}{GFDL}
+\setimg{longan.jpg}{Nelson Ramos-Lopes}{public}{Frutos_Ex\%C3\%B3ticos-LonganFruit-002.JPG}
 \artxt{لونغان}
 \japtxt{リュウガン}
 \engtxt{Longan}
@@ -335,7 +341,7 @@
 \end{element}
 
 \begin{element}
-\setimg{loquat.jpg}{Illusive255}{CC-BY-SA-3}
+\setimg{loquat.jpg}{Illusive255}{cc-by-sa-3.0}{Louqat255.jpg}
 \artxt{بشملة}
 \japtxt{ビワ}
 \engtxt{Loquat}
@@ -343,7 +349,7 @@
 \end{element}
 
 \begin{element}
-\setimg{lychee.jpg}{Luc Viatour}{CC-BY-SA-3}
+\setimg{lychee.jpg}{\href{www.lucnix.be}{Luc Viatour}}{cc-by-sa-3.0}{Litchi_chinensis_Luc_Viatour.jpg}
 \artxt{ليتشي}
 \japtxt{レイシ}
 \engtxt{Lychee}
@@ -351,7 +357,7 @@
 \end{element}
 
 \begin{element}
-\setimg{mandarin.jpg}{Joe Ravi}{CC-BY-SA-3}
+\setimg{mandarin.jpg}{\href{http://commons.wikimedia.org/wiki/User:Jovianeye}{Joe Ravi}}{cc-by-sa-3.0}{Mandarin_Oranges_(Citrus_Reticulata).jpg}
 \artxt{يوسفي}
 \japtxt{マンダリンオレンジ}
 \engtxt{Mandarin orange}
@@ -359,7 +365,7 @@
 \end{element}
 
 \begin{element}
-\setimg{mango.jpg}{Asit K. Ghosh}{CC-BY-SA-3}
+\setimg{mango.jpg}{\href{https://commons.wikimedia.org/wiki/User:Thaumaturgist}{Asit K. Ghosh}}{cc-by-sa-3.0}{Mango_Saigon_Asit_ftg.jpg}
 \artxt{مانغو}
 \japtxt{マンゴー}
 \engtxt{Mango}
@@ -367,7 +373,7 @@
 \end{element}
 
 \begin{element}
-\setimg{mangosteen.jpg}{KayEss}{GFDL}
+\setimg{mangosteen.jpg}{\href{http://commons.wikimedia.org/wiki/User:KayEss}{KayEss}}{cc-by-sa-3.0}{Mangosteen.jpeg}
 \artxt{مانغوستين}
 \japtxt{マンゴスチン}
 \engtxt{Mangosteen}
@@ -375,7 +381,7 @@
 \end{element}
 
 \begin{element}
-\setimg{medlar.jpg}{Andrew Dunn}{CC-BY-SA-2}
+\setimg{medlar.jpg}{\href{http://www.andrewdunnphoto.com/}{Andrew Dunn}}{cc-by-sa-2.0}{Medlar_pomes_and_leaves.jpg}
 \artxt{زعرور بستاني}
 \japtxt{セイヨウカリン}
 \engtxt{Medlar}
@@ -383,7 +389,7 @@
 \end{element}
 
 \begin{element}
-\setimg{miracleberry.jpg}{Hamale Lyman}{public}
+\setimg{miracleberry.jpg}{Hamale Lyman}{public}{MiracleBerry.jpg}
 \artxt{فاكهة المعجزة}
 \japtxt{ミラクルフルーツ}
 \engtxt{Miracle fruit}
@@ -391,18 +397,15 @@
 \end{element}
 
 \begin{element}
-\setimg{mulberry.jpg}{shioshvili at Flickr}{CC-BY-SA-2}
+\setimg{mulberry.jpg}{\href{http://www.flickr.com/people/vshioshvili/}{shioshvili at Flickr}}{cc-by-sa-2.0}{Morus_alba_Tbilisi.jpg}
 \artxt{توت}
 \japtxt{クワ}
 \engtxt{Mulberry}
 \frtxt{Mûre}
 \end{element}
 
-%TODO verify Muskmelon
-
-%Nutmeg
 \begin{element}
-\setimg{nutmeg.jpg}{Joe Ravi}{CC-BY-SA-3}
+\setimg{nutmeg.jpg}{\href{http://commons.wikimedia.org/wiki/User:Jovianeye}{Joe Ravi}}{cc-by-sa-3.0}{Nutmeg_on_Tree.jpg}
 \artxt{جوزة الطيب}
 \japtxt{ナツメグ}
 \engtxt{Nutmeg}
@@ -410,7 +413,7 @@
 \end{element}
 
 \begin{element}
-\setimg{olive.jpg}{Cosasdebeas}{CC-BY-SA-3}
+\setimg{olive.jpg}{Cosasdebeas}{cc-by-sa-3.0}{Aceitunas_maduras.JPG}
 \artxt{زيتون}
 \japtxt{オリーブ}
 \engtxt{Olive}
@@ -418,7 +421,7 @@
 \end{element}
 
 \begin{element}
-\setimg{orange.jpg}{Ellen Levy Finch}{CC-BY-SA-3}
+\setimg{orange.jpg}{\href{http://en.wikipedia.org/wiki/User:Elf}{Ellen Levy Finch}}{cc-by-sa-3.0}{OrangeBloss_wb.jpg}
 \artxt{برتقال}
 \japtxt{オレンジ}
 \engtxt{Orange}
@@ -426,15 +429,15 @@
 \end{element}
 
 \begin{element}
-\setimg{papaya.jpg}{David Monniaux}{GFDL}
+\setimg{papaya.jpg}{David Monniaux}{cc-by-sa-3.0}{Carica_papaya_dsc07806.jpg}
 \artxt{بابايا}
 \japtxt{パパイア}
 \engtxt{Papaya}
 \frtxt{Papaye}
 \end{element}
 
-\begin{element}
-\setimg{passionfruit.jpg}{Fibonacci}{GFDL}
+\begin{element} 
+\setimg{passionfruit.jpg}{\href{http://commons.wikimedia.org/wiki/User:Fibonacci}{Fibonacci}}{cc-by-sa-3.0}{Maracuy\%C3\%A1.jpg}
 \artxt{ماراغويا}
 \japtxt{パッションフルーツ}
 \engtxt{Passion fruit}
@@ -442,7 +445,7 @@
 \end{element}
 
 \begin{element}
-\setimg{peach.jpg}{Takkk}{CC-BY-SA-3}
+\setimg{peach.jpg}{\href{http://commons.wikimedia.org/wiki/User:Takkk}{Takkk}}{cc-by-sa-3.0}{Prunus_persica_-_Peach_Hungary.jpg}
 \artxt{دراق}
 \japtxt{モモ}
 \engtxt{Peach}
@@ -450,7 +453,7 @@
 \end{element}
 
 \begin{element}
-\setimg{pear.jpg}{Glysiak}{CC-BY-SA-3}
+\setimg{pear.jpg}{\href{http://commons.wikimedia.org/wiki/User:Glysiak}{Glysiak}}{cc-by-sa-3.0}{Rocha_Pear.jpg}
 \artxt{إجاص (كمثري)}
 \japtxt{梨(なし)}
 \engtxt{Pear}
@@ -458,7 +461,7 @@
 \end{element}
 
 \begin{element}
-\setimg{pineapple.jpg}{Eurico Zimbres}{GFDL}
+\setimg{pineapple.jpg}{\href{http://commons.wikimedia.org/wiki/User:Zimbres}{Eurico Zimbres}}{cc-by-sa-3.0}{Split_ananas.jpg}
 \artxt{أناناس}
 \japtxt{パイナップル}
 \engtxt{Pineapple}
@@ -466,7 +469,7 @@
 \end{element}
 
 \begin{element}
-\setimg{plum.jpg}{Evan-Amos}{CC0}
+\setimg{plum.jpg}{\href{http://commons.wikimedia.org/wiki/User:Evan-Amos}{Evan-Amos}}{cc0}{Red-Plums.jpg}
 \artxt{برقوق}
 \japtxt{李(すもも)}
 \engtxt{Plum}
@@ -474,7 +477,7 @@
 \end{element}
 
 \begin{element}
-\setimg{pomegrenate.jpg}{Habib M'henni}{CC-BY-SA-3}
+\setimg{pomegrenate.jpg}{\href{http://commons.wikimedia.org/wiki/User:Habib.mhenni}{Habib M'henni}}{cc-by-sa-3.0}{Grenade_Tunisie.png}
 \artxt{رمان}
 \japtxt{石榴(ざくろ)}
 \engtxt{Pomegranate}
@@ -482,7 +485,7 @@
 \end{element}
 
 \begin{element}
-\setimg{pomelo.jpg}{Ananda}{CC-BY-SA-2.5}
+\setimg{pomelo.jpg}{\href{http://commons.wikimedia.org/wiki/User:Ananda}{Ananda}}{cc-by-sa-3.0}{Citrus_grandis_-_Honey_White.jpg}
 \artxt{بوميلو}
 \japtxt{文旦(ぶんたん)}
 \engtxt{Pomelo}
@@ -490,7 +493,7 @@
 \end{element}
 
 \begin{element}
-\setimg{pricklypear.jpg}{Victor Korniyenko}{CC-BY-SA-3}
+\setimg{pricklypear.jpg}{Victor Korniyenko}{cc-by-sa-3.0}{Cactus._Libya.jpg}
 \artxt{التين الشوكي}
 \japtxt{ウチワサボテン}
 \engtxt{Prickly pear}
@@ -498,7 +501,7 @@
 \end{element}
 
 \begin{element}
-\setimg{quince.jpg}{Donovan Govan}{GFDL}
+\setimg{quince.jpg}{\href{http://commons.wikimedia.org/wiki/User:Geocachernemesis}{Donovan Govan}}{cc-by-sa-3.0}{Quince.jpg}
 \artxt{سفرجل}
 \japtxt{マルメロ}
 \engtxt{Quince}
@@ -506,7 +509,7 @@
 \end{element}
 
 \begin{element}
-\setimg{rambutan.jpg}{Tu7uh}{CC-BY-SA-3}
+\setimg{rambutan.jpg}{\href{http://commons.wikimedia.org/wiki/User:Tu7uh}{Tu7uh}}{cc-by-sa-3.0}{Rambutan_masak_didahan.JPG}
 \artxt{رامبوتان}
 \japtxt{ランブータン}
 \engtxt{Rambutan}
@@ -514,7 +517,7 @@
 \end{element}
 
 \begin{element}
-\setimg{raspberry.jpg}{Juhanson}{GFDL}
+\setimg{raspberry.jpg}{\href{http://commons.wikimedia.org/wiki/User:Juhanson}{Juhanson}}{cc-by-sa-3.0}{Raspberries_(Rubus_Idaeus).jpg}
 \artxt{عليق أوروبي}
 \japtxt{ラズベリー}
 \engtxt{Raspberry}
@@ -522,7 +525,7 @@
 \end{element}
 
 \begin{element}
-\setimg{rowan.jpg}{Jonik}{CC-BY-SA-2}
+\setimg{rowan.jpg}{\href{http://commons.wikimedia.org/wiki/User:Jonik}{Jonik}}{cc-by-sa-2}{Rowanberries_in_late_August_2004_in_Helsinki.jpg}
 \artxt{غبيراء}
 \japtxt{ななかまど}
 \engtxt{Rowan}
@@ -530,7 +533,7 @@
 \end{element}
 
 \begin{element}
-\setimg{sapodilla.jpg}{Sugeesh}{CC-BY-SA-3}
+\setimg{sapodilla.jpg}{\href{http://ml.wikipedia.org/wiki/User:Sugeesh}{Sugeesh}}{cc-by-sa-3.0}{\%E0\%B4\%B8\%E0\%B4\%AA\%E0\%B5\%8D\%E0\%B4\%AA\%E0\%B5\%8B\%E0\%B4\%9F\%E0\%B5\%8D\%E0\%B4\%9F_.jpg}
 \artxt{سبوتة}
 \japtxt{サポジラ}
 \engtxt{Sapodilla}
@@ -538,7 +541,7 @@
 \end{element}
 
 \begin{element}
-\setimg{soursop.jpg}{Fpalli}{CC-BY-SA-3}
+\setimg{soursop.jpg}{Fpalli}{cc-by-sa-3.0}{Annona_muricata_(Corossolier_2).jpg}
 \artxt{قشدة شائكة}
 \japtxt{サワーソップ}
 \engtxt{Soursop}
@@ -546,7 +549,7 @@
 \end{element}
 
 \begin{element}
-\setimg{strawberry.jpg}{Rlaferla}{CC-BY-SA-2.5}
+\setimg{strawberry.jpg}{\href{https://en.wikipedia.org/wiki/User:Rlaferla}{Rlaferla}}{cc-by-sa-3.0}{PerfectStrawberry.jpg}
 \artxt{فراولة}
 \japtxt{苺(いちご)}
 \engtxt{Strawberry}
@@ -554,7 +557,7 @@
 \end{element}
 
 \begin{element}
-\setimg{tamarillo.jpg}{Fibonacci}{GFDL}
+\setimg{tamarillo.jpg}{\href{https://commons.wikimedia.org/wiki/User:Fibonacci}{Fibonacci}}{cc-by-sa-3.0}{Tamarillos.jpg}
 \artxt{طماطم شجري}
 \japtxt{タマリロ}
 \engtxt{Tamarillo}
@@ -562,7 +565,7 @@
 \end{element}
 
 \begin{element}
-\setimg{watermelon.jpg}{Garitzko}{public}
+\setimg{watermelon.jpg}{\href{https://commons.wikimedia.org/wiki/User:Garitzko}{Garitzko}}{public}{Wassermelone.jpg}
 \artxt{بطيخ أحمر}
 \japtxt{西瓜(すいか)}
 \engtxt{Watermelon}
@@ -579,7 +582,7 @@
 \imgdir{plants/nut/}
 
 \begin{element}
-\setimg{acorn.jpg}{Bj.schoenmakers}{CC0}
+\setimg{acorn.jpg}{Bj.schoenmakers}{cc0}{Quercus_coccifera_(Kermes_Oak),_Agiasos,_Lesbos,_Greece.jpg}
 \artxt{بلوط}
 \japtxt{団栗(どんぐり)}
 \engtxt{Acorn}
@@ -587,23 +590,15 @@
 \end{element}
 
 \begin{element}
-\setimg{almond.jpg}{Luigi Chiesa}{CC-BY-SA-3}
+\setimg{almond.jpg}{\href{http://commons.wikimedia.org/wiki/User:Luigi_Chiesa}{Luigi Chiesa}}{cc-by-sa-3.0}{Mandorle_sgusciate.jpg}
 \artxt{لوز}
 \japtxt{アーモンド}
 \engtxt{Almond}
 \frtxt{Amande}
 \end{element}
 
-%\begin{element}
-%\setimg{beech.jpg}{Alpsdake}{CC-BY-SA-3}
-%\artxt{زان}
-%\japtxt{ブナの実}
-%\engtxt{Beech}
-%\frtxt{Faîne}
-%\end{element}
-
 \begin{element}
-\setimg{cashew.jpg}{Femto}{GFDL}
+\setimg{cashew.jpg}{\href{http://en.wikipedia.org/wiki/User:Femto}{Femto}}{cc-by-sa-3.0}{CashewSnack.jpg}
 \artxt{كاجو}
 \japtxt{カシューナッツ}
 \engtxt{Cashew}
@@ -611,7 +606,7 @@
 \end{element}
 
 \begin{element}
-\setimg{chestnut.jpg}{Andrejj}{GFDL}
+\setimg{chestnut.jpg}{\href{http://commons.wikimedia.org/wiki/User:Andrejj}{Andrejj}}{cc-by-sa-3.0}{Kostanj_2.jpg}
 \artxt{كستناء}
 \japtxt{くり}
 \engtxt{Chestnut}
@@ -619,7 +614,7 @@
 \end{element}
 
 \begin{element}
-\setimg{hazelnut.jpg}{Fir0002}{GFDL}
+\setimg{hazelnut.jpg}{\href{http://en.wikipedia.org/wiki/User:Fir0002}{Fir0002}}{cc-by-sa-3.0}{Hazelnuts.jpg}
 \artxt{بندق}
 \japtxt{榛(はしばみ)}
 \engtxt{Hazelnut}
@@ -627,7 +622,7 @@
 \end{element}
 
 \begin{element}
-\setimg{hickory.jpg}{Pollinator}{CC-BY-SA-2.5}
+\setimg{hickory.jpg}{\href{http://en.wikipedia.org/wiki/User:Pollinator}{Pollinator}}{cc-by-sa-2.5}{Hickory_nuts_6060.JPG}
 \artxt{جوزية}
 \japtxt{ヒッコリー}
 \engtxt{Hickory}
@@ -635,7 +630,7 @@
 \end{element}
 
 \begin{element}
-\setimg{peanut.jpg}{H. Zell}{CC-BY-SA-3}
+\setimg{peanut.jpg}{\href{http://commons.wikimedia.org/wiki/User:Llez}{H. Zell}}{cc-by-sa-3.0}{Arachis_hypogaea_004.JPG}
 \artxt{فول سوداني}
 \japtxt{落花生(らっかせい)}
 \engtxt{Peanut}
@@ -643,7 +638,7 @@
 \end{element}
 
 \begin{element}
-\setimg{pinenut.jpg}{Nuno Tavares}{}
+\setimg{pinenut.jpg}{\href{http://commons.wikimedia.org/wiki/User:Nuno_Tavares}{Nuno Tavares}}{cc-by-sa-3.0}{Pine_cone_with_nuts.jpg}
 \artxt{حبوب الصنوبر}
 \japtxt{松の実(まつのみ)}
 \engtxt{Pine nut}
@@ -651,7 +646,7 @@
 \end{element}
 
 \begin{element}
-\setimg{pistachio.jpg}{Cemg}{CC-BY-SA-3}
+\setimg{pistachio.jpg}{\href{http://commons.wikimedia.org/wiki/User:Cemg}{Cemg}}{cc-by-sa-3.0}{Pistacchi.JPG}
 \artxt{فستق}
 \japtxt{ピスタチオ}
 \engtxt{Pistachio}
@@ -659,7 +654,7 @@
 \end{element}
 
 \begin{element}
-\setimg{soybean.jpg}{Scott Bauer}{public}
+\setimg{soybean.jpg}{\href{http://www.ars.usda.gov/is/graphics/photos/k4389-11.htm}{Scott Bauer}}{public}{Sojabohne.jpg}
 \artxt{فول الصويا}
 \japtxt{大豆(だいず)}
 \engtxt{Soybean}
@@ -667,7 +662,7 @@
 \end{element}
 
 \begin{element}
-\setimg{walnut.jpg}{J.Dncsn}{CC-BY-SA-3}
+\setimg{walnut.jpg}{J.Dncsn}{cc-by-sa-3.0}{3_walnuts.jpg}
 \artxt{جوز}
 \japtxt{くるみ}
 \engtxt{Walnut}
@@ -685,7 +680,7 @@
 \imgdir{plants/cereal/}
 
 \begin{element}
-\setimg{barely.jpg}{raul.dupagne}{public}
+\setimg{barely.jpg}{raul.dupagne}{public}{Escourgeon-Hordeum_vulgare_subsp._vulgare.jpg}
 \artxt{شعير}
 \japtxt{大麦(おおむぎ)}
 \engtxt{Barely}
@@ -693,7 +688,7 @@
 \end{element}
 
 \begin{element}
-\setimg{maize.jpg}{4028mdk09}{CC-BY-SA-3}
+\setimg{maize.jpg}{\href{https://commons.wikimedia.org/wiki/User:4028mdk09}{4028mdk09}}{cc-by-sa-3.0}{Reifer_Maiskolben.JPG}
 \artxt{ذرة}
 \japtxt{とうもろこし}
 \engtxt{Maize (Corn)}
@@ -701,7 +696,7 @@
 \end{element}
 
 \begin{element}
-\setimg{millet.jpg}{Jwilson}{public}
+\setimg{millet.jpg}{\href{https://en.wikipedia.org/wiki/User:Jwilson}{Jwilson}}{public}{Finger_millet_3_11-21-02.jpg}
 \artxt{دخن (بشنة)}
 \japtxt{雑穀(ざっこく)}
 \engtxt{Millet}
@@ -709,7 +704,7 @@
 \end{element}
 
 \begin{element}
-\setimg{oat.jpg}{H. Zell}{GFDL}
+\setimg{oat.jpg}{\href{https://commons.wikimedia.org/wiki/User:Llez}{H. Zell}}{cc-by-sa-3.0}{Avena_sativa_002.JPG}
 \artxt{شوفان}
 \japtxt{えんばく}
 \engtxt{Oat}
@@ -717,7 +712,7 @@
 \end{element}
 
 \begin{element}
-\setimg{rice.jpg}{Keith Weller}{public}
+\setimg{rice.jpg}{\href{http://www.ars.usda.gov/is/graphics/photos/k7577-1.htm}{Keith Weller}}{public}{US_long_grain_rice.jpg}
 \artxt{أرز}
 \japtxt{米(こめ)}
 \engtxt{Rice}
@@ -725,7 +720,7 @@
 \end{element}
 
 \begin{element}
-\setimg{rye.jpg}{LSDSL}{GFDL}
+\setimg{rye.jpg}{\href{https://commons.wikimedia.org/wiki/User:LSDSL}{LSDSL}}{cc-by-sa-3.0}{Ear_of_rye.jpg}
 \artxt{شيلم}
 \japtxt{ライ麦(むぎ)}
 \engtxt{Rye}
@@ -733,7 +728,7 @@
 \end{element}
 
 \begin{element}
-\setimg{spelt.jpg}{b\"ohringer friedrich}{CC-BY-SA-2.5}
+\setimg{spelt.jpg}{\href{https://commons.wikimedia.org/wiki/User:B\%C3\%B6hringer}{b\"ohringer friedrich}}{cc-by-sa-2.5}{Triticum_spelta_5.JPG}
 \artxt{حنطة}
 \japtxt{スペルト}
 \engtxt{Spelt}
@@ -741,20 +736,12 @@
 \end{element}
 
 \begin{element}
-\setimg{wheat.jpg}{Bluemoose}{GFDL}
+\setimg{wheat.jpg}{\href{https://commons.wikimedia.org/wiki/User:Bluemoose}{Bluemoose}}{cc-by-sa-3.0}{Wheat_close-up.JPG}
 \artxt{قمح}
 \japtxt{小麦(こむぎ)}
 \engtxt{Wheat}
 \frtxt{Blé}
 \end{element}
-
-%\begin{element}
-%\setimg{}{}{}
-%\artxt{}
-%\japtxt{}
-%\engtxt{}
-%\frtxt{}
-%\end{element}
 
 \chapter{Legumes (pulse)}
 \begin{category}
@@ -766,7 +753,7 @@
 \imgdir{plants/pulse/}
 
 \begin{element}
-\setimg{bean.jpg}{Andrew Butko}{CC-BY-SA-3}
+\setimg{bean.jpg}{\href{https://commons.wikimedia.org/wiki/User:Butko}{Andrew Butko}}{cc-by-sa-3.0}{Ab_food_19.jpg}
 \artxt{فاصولياء}
 \japtxt{いんげん豆(まめ)}
 \engtxt{Bean}
@@ -774,7 +761,7 @@
 \end{element}
 
 \begin{element}
-\setimg{broadbean.jpg}{Aneta}{GFDL}
+\setimg{broadbean.jpg}{Aneta}{cc-by-sa-3.0}{Vicia_faba_01.jpg}
 \artxt{فول}
 \japtxt{空豆(そらまめ)}
 \engtxt{Broad bean}
@@ -782,7 +769,7 @@
 \end{element}
 
 \begin{element}
-\setimg{chickpea.jpg}{Sanjay Acharya}{GFDL}
+\setimg{chickpea.jpg}{\href{https://commons.wikimedia.org/wiki/User:Sanjay_ach}{Sanjay Acharya}}{cc-by-sa-3.0}{Sa-whitegreen-chickpea.jpg}
 \artxt{حمص}
 \japtxt{雛豆(ひよこまめ)}
 \engtxt{Chickpea}
@@ -790,7 +777,7 @@
 \end{element}
 
 \begin{element}
-\setimg{lentil.jpg}{Tiia Monto}{CC-BY-SA-3}
+\setimg{lentil.jpg}{\href{https://commons.wikimedia.org/wiki/User:Kulmalukko}{Tiia Monto}}{cc-by-sa-3.0}{Green_lentils.jpg}
 \artxt{عدس}
 \japtxt{レンズ豆(まめ)}
 \engtxt{Lentil}
@@ -798,7 +785,7 @@
 \end{element}
 
 \begin{element}
-\setimg{pea.jpg}{Renee Comet}{Public}
+\setimg{pea.jpg}{\href{http://visualsonline.cancer.gov/details.cfm?imageid=2612}{Renee Comet}}{Public}{NCI_peas_in_pod.jpg}
 \artxt{بازلاء}
 \japtxt{豌豆(えんどう)}
 \engtxt{Pea}
@@ -816,7 +803,7 @@
 \imgdir{plants/herbs/}
 
 \begin{element}
-\setimg{anise.jpg}{David Monniaux}{GFDL}
+\setimg{anise.jpg}{\href{https://commons.wikimedia.org/wiki/User:David.Monniaux}{David Monniaux}}{cc-by-sa-3.0}{Aniseed_p1160018.jpg}
 \artxt{يانسون}
 \japtxt{アニス}
 \engtxt{Anise}
@@ -824,7 +811,7 @@
 \end{element}
 
 \begin{element}
-\setimg{basil.jpg}{Castielli}{CC-BY-SA-3}
+\setimg{basil.jpg}{\href{https://commons.wikimedia.org/wiki/User:Castielli}{Castielli}}{cc-by-sa-3.0}{Basil-Basilico-Ocimum_basilicum-albahaca.jpg}
 \artxt{حبق (ريحان)}
 \japtxt{バジリコ}
 \engtxt{Basil}
@@ -832,7 +819,7 @@
 \end{element}
 
 \begin{element}
-\setimg{baylaurel.jpg}{yann}{CC-BY-SA-3}
+\setimg{baylaurel.jpg}{yann}{cc-by-sa-3.0}{Laurier_sauce.JPG}
 \artxt{غار (رند)}
 \japtxt{月桂樹(げっけいじゅ)}
 \engtxt{Bay Laurel}
@@ -840,7 +827,7 @@
 \end{element}
 
 \begin{element}
-\setimg{caraway.jpg}{Oliver s.}{GFDL}
+\setimg{caraway.jpg}{\href{http://de.wikipedia.org/wiki/Benutzer:Oliver_s.}{Oliver s.}}{cc-by-sa-3.0}{K\%C3\%BCmmelsamen_f\%C3\%BCr_WP.jpg}
 \artxt{كَرَوْيَاء}
 \japtxt{キャラウェイ}
 \engtxt{Caraway}
@@ -848,7 +835,7 @@
 \end{element}
 
 \begin{element}
-\setimg{cardamom.jpg}{Rainer Zenz}{Public}
+\setimg{cardamom.jpg}{\href{http://de.wikipedia.org/wiki/User:Rainer_Zenz}{Rainer Zenz}}{Public}{Elettaria_cardamomum2.jpg}
 \artxt{هال}
 \japtxt{カルダモン}
 \engtxt{Cardamom}
@@ -856,7 +843,7 @@
 \end{element}
 
 \begin{element}
-\setimg{carob.jpg}{Chixoy}{GFDL}
+\setimg{carob.jpg}{\href{http://commons.wikimedia.org/wiki/User:Chixoy}{Chixoy}}{cc-by-sa-3.0}{Garroves.JPG}
 \artxt{خروب}
 \japtxt{キャロブ}
 \engtxt{Carob}
@@ -864,7 +851,7 @@
 \end{element}
 
 \begin{element}
-\setimg{cayennepepper.jpg}{André\'e Karwath}{CC-BY-SA-2.5}
+\setimg{cayennepepper.jpg}{\href{http://commons.wikimedia.org/wiki/User:Aka}{Andr\'e Karwath}}{cc-by-sa-2.5}{Large_Cayenne.jpg}
 \artxt{فلفل حريف}
 \japtxt{カイエンペッパー}
 \engtxt{Cayenne pepper}
@@ -872,7 +859,7 @@
 \end{element}
 
 \begin{element}
-\setimg{celery.jpg}{Howcheng}{GFDL}
+\setimg{celery.jpg}{\href{http://commons.wikimedia.org/wiki/User:Howcheng}{Howcheng}}{cc-by-sa-3.0}{Celery_seed.jpg}
 \artxt{كرفس}
 \japtxt{セロリ}
 \engtxt{Celery}
@@ -880,7 +867,7 @@
 \end{element}
 
 \begin{element}
-\setimg{coriander.jpg}{ZooFari + Bierfaß}{Public + CC-BY-SA-3}
+\setimg{coriander.jpg}{\href{http://commons.wikimedia.org/wiki/User:Bierfa\%C3\%9F}{Bierfaß} + \href{http://commons.wikimedia.org/wiki/User:ZooFari}{ZooFari}}{cc-by-sa-3.0 + public}{Coriander.jpg+Cilantro_leaf.jpg}
 \artxt{كزبرة}
 \japtxt{コリアンダー}
 \engtxt{Coriander}
@@ -888,7 +875,7 @@
 \end{element}
 
 \begin{element}
-\setimg{cinnamon.jpg}{Antti V\"ah\"a-Sipil\"a}{CC-BY-SA-1fi}
+\setimg{cinnamon.jpg}{\href{http://commons.wikimedia.org/wiki/User:Anttivs}{Antti V\"ah\"a-Sipil\"a}}{cc-by-sa-1fi}{Cinnamomum_Verum_vs_Cinnamomum_Burmannii.jpg}
 \artxt{قرفة}
 \japtxt{シナモン}
 \engtxt{Cinnamon}
@@ -896,7 +883,7 @@
 \end{element}
 
 \begin{element}
-\setimg{clove.jpg}{Brian Arthur}{CC-BY-2.5}
+\setimg{clove.jpg}{\href{http://commons.wikimedia.org/wiki/User:Ies}{Brian Arthur}}{cc-by-3.0}{ClovesDried.jpg}
 \artxt{قرنفل}
 \japtxt{クローブ}
 \engtxt{Clove}
@@ -904,7 +891,7 @@
 \end{element}
 
 \begin{element}
-\setimg{cumin.jpg}{Sanjay Acharya}{GFDL}
+\setimg{cumin.jpg}{\href{http://commons.wikimedia.org/wiki/User:Sanjay_ach}{Sanjay Acharya}}{cc-by-3.0}{Sa_cumin.jpg}
 \artxt{كمون}
 \japtxt{クミン}
 \engtxt{Cumin}
@@ -912,7 +899,7 @@
 \end{element}
 
 \begin{element}
-\setimg{dill.jpg}{Arto Alanenp\"a\"a}{CC-BY-SA-3}
+\setimg{dill.jpg}{\href{http://commons.wikimedia.org/wiki/User:Aadesig}{Arto Alanenp\"a\"a}}{cc-by-sa-3.0}{Dill_seed_tilli_siemen.jpg}
 \artxt{شبت}
 \japtxt{イノンド}
 \engtxt{Dill}
@@ -920,7 +907,7 @@
 \end{element}
 
 \begin{element}
-\setimg{fennel.jpg}{Howcheng}{GFDL}
+\setimg{fennel.jpg}{\href{http://commons.wikimedia.org/wiki/User:Howcheng}{Howcheng}}{cc-by-sa-3.0}{Fennel_seed.jpg}
 \artxt{شمار (بسباس)}
 \japtxt{フェンネル}
 \engtxt{Fennel}
@@ -928,7 +915,7 @@
 \end{element}
 
 \begin{element}
-\setimg{fenugreek.jpg}{Humbads}{Public}
+\setimg{fenugreek.jpg}{\href{http://en.wikipedia.org/wiki/User:Humbads}{Humbads}}{Public}{Fenugreek-methi-seeds.jpg}
 \artxt{حلبة}
 \japtxt{フェヌグリーク}
 \engtxt{Fenugreek}
@@ -936,7 +923,7 @@
 \end{element}
 
 \begin{element}
-\setimg{ginger.jpg}{Frank C. M\"uller}{CC-BY-SA-3}
+\setimg{ginger.jpg}{\href{http://commons.wikimedia.org/wiki/User:Frank_C._M\%C3\%BCller}{Frank C. M\"uller}}{cc-by-sa-3.0}{Ingwer_2_fcm.jpg}
 \artxt{زنجبيل}
 \japtxt{生姜(しょうが)}
 \engtxt{Ginger}
@@ -944,7 +931,7 @@
 \end{element}
 
 \begin{element}
-\setimg{jasmine.jpg}{Ton Rulkens}{CC-BY-SA-2}
+\setimg{jasmine.jpg}{\href{http://www.flickr.com/people/47108884@N07}{Ton Rulkens}}{cc-by-sa-2}{Jasmin_(4754541197).jpg}
 \artxt{ياسمين}
 \japtxt{ジャスミン}
 \engtxt{Jasmine}
@@ -952,7 +939,7 @@
 \end{element}
 
 \begin{element}
-\setimg{lavender.jpg}{Stickpen}{Public}
+\setimg{lavender.jpg}{\href{http://commons.wikimedia.org/wiki/User:Stickpen}{Stickpen}}{Public}{Lavandulaheterophylla.jpg}
 \artxt{خزامى}
 \japtxt{ラベンダー}
 \engtxt{Lavender}
@@ -960,7 +947,7 @@
 \end{element}
 
 \begin{element}
-\setimg{lemonverbena.jpg}{H. Zell}{CC-BY-SA-3}
+\setimg{lemonverbena.jpg}{\href{http://commons.wikimedia.org/wiki/User:Llez}{H. Zell}}{cc-by-sa-3.0}{Aloysia_citrodora_002.JPG}
 \artxt{رعي الحمام الليموني}
 \japtxt{レモンバーベナ}
 \engtxt{Lemon verbena}
@@ -968,7 +955,7 @@
 \end{element}
 
 \begin{element}
-\setimg{liquorice.jpg}{KoS}{Public}
+\setimg{liquorice.jpg}{\href{https://commons.wikimedia.org/wiki/User:KoS}{KoS}}{Public}{Baton_de_reglisse.jpg}
 \artxt{عرقسوس}
 \japtxt{甘草(かんぞう)}
 \engtxt{Liquorice}
@@ -976,7 +963,7 @@
 \end{element}
 
 \begin{element}
-\setimg{mint.jpg}{Kham Tran}{CC-BY-3}
+\setimg{mint.jpg}{\href{ www.khamtran.com}{Kham Tran}}{cc-by-3.0}{Mint-leaves-2007.jpg}
 \artxt{نعناع}
 \japtxt{ミント}
 \engtxt{Mint}
@@ -984,7 +971,7 @@
 \end{element}
 
 \begin{element}
-\setimg{mustard.jpg}{Sanjay Acharya}{GFDL}
+\setimg{mustard.jpg}{\href{https://commons.wikimedia.org/wiki/User:Sanjay_ach}{Sanjay Acharya}}{cc-by-sa-3.0}{Black-mustard-seeds.jpg}
 \artxt{خردل}
 \japtxt{芥子菜(からしな)}
 \engtxt{Mustard}
@@ -992,7 +979,7 @@
 \end{element}
 
 \begin{element}
-\setimg{nigella.jpg}{Pamla J. Eisenberg}{CC-BY-SA-2}
+\setimg{nigella.jpg}{\href{http://www.flickr.com/people/27398485@N08}{Pamla J. Eisenberg}}{cc-by-sa-2.0}{Nigella_Sativa,_Herb_Garden,_Huntington.jpg}
 \artxt{حبة البركة}
 \japtxt{ニゲラ}
 \engtxt{Nigella}
@@ -1000,7 +987,7 @@
 \end{element}
 
 \begin{element}
-\setimg{parsley.jpg}{Forest \& Kim Starr}{CC-BY-3}
+\setimg{parsley.jpg}{\href{http://www.hear.org/starr/}{Forest \& Kim Starr}}{cc-by-3.0}{Starr_070112-3393_Petroselinum_crispum.jpg}
 \artxt{بقدونس}
 \japtxt{パセリ}
 \engtxt{Parsley}
@@ -1008,7 +995,7 @@
 \end{element}
 
 \begin{element}
-\setimg{blackpepper.jpg}{Devadaskrishnan}{CC-BY-3}
+\setimg{blackpepper.jpg}{\href{https://en.wikipedia.org/wiki/User:Devadaskrishnan}{Devadaskrishnan}}{cc-by-3.0}{Pepper091.jpg}
 \artxt{فلفل أسود}
 \japtxt{こしょう}
 \engtxt{Black pepper}
@@ -1016,7 +1003,7 @@
 \end{element}
 
 \begin{element}
-\setimg{rosemary.jpg}{THOR}{CC-BY-2}
+\setimg{rosemary.jpg}{\href{http://www.flickr.com/people/49503154413@N01}{THOR}}{cc-by-2.0}{Rosmarinus_officinalis133095382.jpg}
 \artxt{إكليل الجبل}
 \japtxt{ローズマリー}
 \engtxt{Rosemary}
@@ -1024,7 +1011,7 @@
 \end{element}
 
 \begin{element}
-\setimg{safflower.jpg}{Pseudoanas}{Public}
+\setimg{safflower.jpg}{\href{https://commons.wikimedia.org/wiki/User:Pseudoanas}{Pseudoanas}}{cc0}{Carthamus_tinctorius_050709b.JPG}
 \artxt{عصفر}
 \japtxt{紅花(べにばな)}
 \engtxt{Safflower}
@@ -1032,7 +1019,7 @@
 \end{element}
 
 \begin{element}
-\setimg{saffron.jpg}{Serpico}{CC-BY-SA-3}
+\setimg{saffron.jpg}{\href{https://commons.wikimedia.org/wiki/User:Free.serpico}{Serpico}}{cc-by-sa-3.0}{Saffron5.jpg}
 \artxt{زعفران}
 \japtxt{サフラン}
 \engtxt{Saffron}
@@ -1040,7 +1027,7 @@
 \end{element}
 
 \begin{element}
-\setimg{thyme.jpg}{MPF}{CC-BY-SA-3}
+\setimg{thyme.jpg}{\href{https://en.wikipedia.org/wiki/User:MPF}{MPF}}{cc-by-sa-3.0}{Thymus_vulgaris.jpg}
 \artxt{زعتر}
 \japtxt{タイム}
 \engtxt{Thyme}
@@ -1048,7 +1035,7 @@
 \end{element}
 
 \begin{element}
-\setimg{turmeric.jpg}{H. Zell}{CC-BY-SA-3}
+\setimg{turmeric.jpg}{\href{http://commons.wikimedia.org/wiki/User:Llez}{H. Zell}}{cc-by-sa-3.0}{Curcuma_longa_001.JPG}
 \artxt{كركم}
 \japtxt{うこん}
 \engtxt{Turmeric}
@@ -1056,7 +1043,7 @@
 \end{element}
 
 \begin{element}
-\setimg{vanilla.jpg}{Bouba}{CC-BY-SA-1}
+\setimg{vanilla.jpg}{\href{https://commons.wikimedia.org/wiki/User:Bouba}{Bouba}}{cc-by-sa-1.0}{Vanilla_fragrans_2.jpg}
 \artxt{فانيليا}
 \japtxt{バニラ}
 \engtxt{Vanilla}
@@ -1064,7 +1051,7 @@
 \end{element}
 
 \begin{element}
-\setimg{wasabi.jpg}{663highland}{CC-BY-2.5}
+\setimg{wasabi.jpg}{\href{https://ja.wikipedia.org/wiki/user:663highland}{663highland}}{cc-by-3.0}{Daio_wasabi_farm11s1800.jpg}
 \artxt{واسابي}
 \japtxt{山葵(わさび)}
 \engtxt{Wasabi}
@@ -1081,7 +1068,7 @@
 \imgdir{plants/veg-leafy/}
 
 \begin{element}
-\setimg{arugula.jpg}{Leo Michels}{public}
+\setimg{arugula.jpg}{\href{http://www.imagines-plantarum.de/}{Leo Michels}}{public}{Eruca_sativa_1_IP0206101.jpg}
 \artxt{جرجير}
 \japtxt{ルッコラ}
 \engtxt{Arugula (Salad rocket)}
@@ -1089,7 +1076,7 @@
 \end{element}
 
 \begin{element}
-\setimg{brusselssprout.jpg}{Eric Hunt}{GFDL}
+\setimg{brusselssprout.jpg}{\href{http://commons.wikimedia.org/wiki/User:Eric_in_SF}{Eric Hunt}}{cc-by-sa-3.0}{Brussels_sprout_closeup.jpg}
 \artxt{كرنب بروكسل}
 \japtxt{メキャベツ}
 \engtxt{Brussels sprout}
@@ -1097,7 +1084,7 @@
 \end{element}
 
 \begin{element}
-\setimg{cabbage.jpg}{Surya Prakash.S.A.}{CC-BY-SA-3}
+\setimg{cabbage.jpg}{\href{http://commons.wikimedia.org/wiki/User:Surya_Prakash.S.A.}{Surya Prakash.S.A.}}{cc-by-sa-3.0}{Cabbage_bundle.JPG}
 \artxt{ملفوف}
 \japtxt{キャベツ}
 \engtxt{Cabbage}
@@ -1105,7 +1092,7 @@
 \end{element}
 
 \begin{element}
-\setimg{celery.jpg}{Popolon}{GFDL}
+\setimg{celery.jpg}{\href{http://commons.wikimedia.org/wiki/User:Popolon}{Popolon}}{cc-by-sa-3.0}{C\%C3\%A9leri.jpg}
 \artxt{كرفس}
 \japtxt{セロリ}
 \engtxt{Celery}
@@ -1113,7 +1100,7 @@
 \end{element}
 
 \begin{element}
-\setimg{commonpurslane.jpg}{ZooFari}{CC-BY-SA-3}
+\setimg{commonpurslane.jpg}{\href{http://commons.wikimedia.org/wiki/User:ZooFari}{ZooFari}}{cc-by-sa-3.0}{Portulaca_oleracea.JPG}
 \artxt{بقلة حمقاء}
 \japtxt{スベリヒユ}
 \engtxt{Common Purslane}
@@ -1121,7 +1108,7 @@
 \end{element}
 
 \begin{element}
-\setimg{kale.jpg}{Evan-Amos}{CC-0}
+\setimg{kale.jpg}{\href{http://commons.wikimedia.org/wiki/User:Evan-Amos}{Evan-Amos}}{cc0}{Kale-Bundle.jpg}
 \artxt{كالي}
 \japtxt{ケール}
 \engtxt{Kale}
@@ -1129,7 +1116,7 @@
 \end{element}
 
 \begin{element}
-\setimg{lettuce.jpg}{Stephen Ausmus}{public}
+\setimg{lettuce.jpg}{\href{http://www.ars.usda.gov/is/graphics/photos/jun04/k11258-2.htm}{Stephen Ausmus}}{public}{Lettuce_romaine_variety.jpeg}
 \artxt{خس}
 \japtxt{レタス}
 \engtxt{Lettuce}
@@ -1137,7 +1124,7 @@
 \end{element}
 
 \begin{element}
-\setimg{melokhia.jpg}{apple2000}{CC-BY-SA-3}
+\setimg{melokhia.jpg}{\href{http://commons.wikimedia.org/wiki/User:Apple2000}{apple2000}}{cc-by-sa-3.0}{Molokheiya02.jpg}
 \artxt{ملوخية}
 \japtxt{モロヘイヤ}
 \engtxt{Melokhia}
@@ -1153,7 +1140,7 @@
 %\end{element}
 
 \begin{element}
-\setimg{sorrel.jpg}{Burschik}{GFDL}
+\setimg{sorrel.jpg}{\href{http://en.wikipedia.org/wiki/User:Burschik}{Burschik}}{cc-by-sa-3.0}{Rumex_acetosa_cultivar_01.jpg}
 \artxt{حماض بستاني}
 \japtxt{すいば}
 \engtxt{Sorrel}
@@ -1161,7 +1148,7 @@
 \end{element}
 
 \begin{element}
-\setimg{spinach.jpg}{Krish Dulal}{CC-BY-SA-3}
+\setimg{spinach.jpg}{\href{http://commons.wikimedia.org/wiki/User:Krish_Dulal}{Krish Dulal}}{cc-by-sa-3.0}{Spinach.jpg}
 \artxt{سبانخ}
 \japtxt{菠薐草(ほうれんそう)}
 \engtxt{Spinach}
@@ -1169,7 +1156,7 @@
 \end{element}
 
 \begin{element}
-\setimg{swisschard.jpg}{Sanjay Acharya}{GFDL}
+\setimg{swisschard.jpg}{\href{http://commons.wikimedia.org/wiki/User:Sanjay_ach}{Sanjay Acharya}}{cc-by-sa-3.0}{Red_chard.jpg}
 \artxt{سلق}
 \japtxt{不断草(ふだんそう)}
 \engtxt{Swiss chard}
@@ -1177,7 +1164,7 @@
 \end{element}
 
 \begin{element}
-\setimg{turnip.jpg}{Frank Vincentz}{CC-BY-SA-3}
+\setimg{turnip.jpg}{Frank Vincentz}{cc-by-sa-3.0}{Remscheid_L\%C3\%BCttringhausen_-_Bauernmarkt_53_ies.jpg}
 \artxt{لفت}
 \japtxt{蕪(かぶ)}
 \engtxt{Turnip}
@@ -1194,7 +1181,7 @@
 \imgdir{plants/veg-fruit/}
 
 %\begin{element}
-%\setimg{avocado.jpg}{Marco.Finke}{CC-BY-SA-3}
+%\setimg{avocado.jpg}{Marco.Finke}{cc-by-sa-3.0}
 %\artxt{أفوكادو}
 %\japtxt{アボカド}
 %\engtxt{Avocado}
@@ -1202,7 +1189,7 @@
 %\end{element}
 
 \begin{element}
-\setimg{bellpepper.jpg}{Nikodem Nijaki}{CC-BY-SA-3}
+\setimg{bellpepper.jpg}{\href{http://commons.wikimedia.org/wiki/User:Nikodem_Nijaki}{Nikodem Nijaki}}{cc-by-sa-3.0}{Capsicum_annuum_fruits_IMGP0049.jpg}
 \artxt{فلفل رومي}
 \japtxt{ピーマン}
 \engtxt{Bell pepper}
@@ -1210,7 +1197,7 @@
 \end{element}
 
 \begin{element}
-\setimg{bittermelon.jpg}{Sengai Podhuvan}{CC-BY-SA-3}
+\setimg{bittermelon.jpg}{\href{http://commons.wikimedia.org/wiki/User:Sengai_Podhuvan}{Sengai Podhuvan}}{cc-by-sa-3.0}{Bitter_gourd_India.jpg}
 \artxt{قرع مر}
 \japtxt{蔓茘枝(つるれいし)}
 \engtxt{Bitter melon}
@@ -1218,7 +1205,7 @@
 \end{element}
 
 \begin{element}
-\setimg{cucumber.jpg}{Mariuszjbie}{CC-BY-SA-3}
+\setimg{cucumber.jpg}{Mariuszjbie}{cc-by-sa-3.0}{Og\%C3\%B3rki...jpg}
 \artxt{خيار}
 \japtxt{胡瓜(きゅうり)}
 \engtxt{Cucumber}
@@ -1226,7 +1213,7 @@
 \end{element}
 
 \begin{element}
-\setimg{eggplant.jpg}{Horst Frank}{GFDL}
+\setimg{eggplant.jpg}{\href{http://commons.wikimedia.org/wiki/User:Horst_Frank}{Horst Frank}}{cc-by-sa-3.0}{Aubergine.jpg}
 \artxt{باذنجان}
 \japtxt{茄子(なす)}
 \engtxt{Eggplant (Aubergine)}
@@ -1234,7 +1221,7 @@
 \end{element}
 
 \begin{element}
-\setimg{pumpkin.jpg}{Nick Ares}{CC-BY-SA-2}
+\setimg{pumpkin.jpg}{\href{http://flickr.com/photos/9993075@N06}{Nick Ares}}{cc-by-sa-2.0}{Giant_Pumpkin_Festival_10.20.07_130.jpg}
 \artxt{يقطين (قرع)}
 \japtxt{かぼちゃ}
 \engtxt{Pumpkin}
@@ -1242,7 +1229,7 @@
 \end{element}
 
 \begin{element}
-\setimg{sweetcorn.jpg}{Beat von Stein}{GFDL}
+\setimg{sweetcorn.jpg}{Beat von Stein}{cc-by-sa-3.0}{Zuckermais_Maiskolben.JPG}
 \artxt{ذرة حلوة}
 \japtxt{スイートコーン}
 \engtxt{Sweet corn}
@@ -1250,7 +1237,7 @@
 \end{element}
 
 \begin{element}
-\setimg{tomatillo.jpg}{Malte}{public}
+\setimg{tomatillo.jpg}{\href{http://commons.wikimedia.org/wiki/User:Malte}{Malte}}{public}{Tomatillo.jpg}
 \artxt{توماتيلو}
 \japtxt{トマティーヨ}
 \engtxt{Tomatillo}
@@ -1258,7 +1245,7 @@
 \end{element}
 
 \begin{element}
-\setimg{tomato.jpg}{Softeis}{GFDL}
+\setimg{tomato.jpg}{\href{http://commons.wikimedia.org/wiki/User:Softeis}{Softeis}}{cc-by-sa-3.0}{Tomato_je.jpg}
 \artxt{طماطم}
 \japtxt{トマト}
 \engtxt{Tomato}
@@ -1266,7 +1253,7 @@
 \end{element}
 
 \begin{element}
-\setimg{zucchini.jpg}{Stuart Halliday}{public}
+\setimg{zucchini.jpg}{\href{http://commons.wikimedia.org/wiki/User:Quatermass}{Stuart Halliday}}{public}{Cucurbita_pepo1.jpg}
 \artxt{كوسى}
 \japtxt{ズッキーニ}
 \engtxt{Zucchini (Courgette)}
@@ -1283,7 +1270,7 @@
 \imgdir{plants/veg-flower/}
 
 \begin{element}
-\setimg{artichoke.jpg}{Brunswyk}{GFDL}
+\setimg{artichoke.jpg}{\href{http://de.wikipedia.org/wiki/Benutzer:Brunswyk}{Brunswyk}}{cc-by-sa-3.0}{Braunschweig_Botanischer_Garten_Artischocke.JPG}
 \artxt{خرشوف}
 \japtxt{アーティチョーク}
 \engtxt{Artichoke}
@@ -1291,7 +1278,7 @@
 \end{element}
 
 \begin{element}
-\setimg{broccoli.jpg}{David Monniaux}{CC-BY-SA-1}
+\setimg{broccoli.jpg}{\href{http://commons.wikimedia.org/wiki/User:David.Monniaux}{David Monniaux}}{cc-by-sa-3.0}{Broccoli_DSC00861.png}
 \artxt{قرنبيط أخضر}
 \japtxt{ブロッコリー}
 \engtxt{Broccoli}
@@ -1299,7 +1286,7 @@
 \end{element}
 
 \begin{element}
-\setimg{cauliflower.jpg}{Miansari66}{public}
+\setimg{cauliflower.jpg}{\href{http://commons.wikimedia.org/wiki/User:Miansari66}{Miansari66}}{public}{Phool_Gobhi.JPG}
 \artxt{قرنبيط}
 \japtxt{カリフラワー}
 \engtxt{Cauliflower}
@@ -1315,8 +1302,8 @@
 \end{category}
 \imgdir{plants/veg-pod/}
 
-\begin{element}
-\setimg{broadbean.jpg}{KoS}{public}
+\begin{element} 
+\setimg{broadbean.jpg}{\href{http://commons.wikimedia.org/wiki/User:KoS}{KoS}}{public}{F\%C3\%A8ves.jpg}
 \artxt{فول}
 \japtxt{空豆(そらまめ)}
 \engtxt{Broad bean}
@@ -1324,7 +1311,7 @@
 \end{element}
 
 \begin{element}
-\setimg{greenbean.jpg}{Jamain}{CC-BY-SA-3}
+\setimg{greenbean.jpg}{\href{http://commons.wikimedia.org/wiki/User:Jamain}{Jamain}}{cc-by-sa-3.0}{French_beans_J1.JPG}
 \artxt{فاصوليا خضراء}
 \japtxt{莢隠元(さやいんげん)}
 \engtxt{Green bean}
@@ -1332,7 +1319,7 @@
 \end{element}
 
 \begin{element}
-\setimg{hyacinthbean.jpg}{Paul Henjum}{public}
+\setimg{hyacinthbean.jpg}{\href{http://en.wikipedia.org/wiki/User:Hardyplants}{Paul Henjum}}{public}{Lablabpod.jpg}
 \artxt{لوبيا لبلابية}
 \japtxt{藤豆(ふじまめ)}
 \engtxt{Hyacinth bean}
@@ -1340,7 +1327,7 @@
 \end{element}
 
 \begin{element}
-\setimg{okra.jpg}{Bill Tarpenning}{public}
+\setimg{okra.jpg}{\href{http://www.usda.gov/oc/photo/96cs2488.htm}{Bill Tarpenning}}{public}{Bucket_of_raw_okra_pods.jpg}
 \artxt{بامية}
 \japtxt{オクラ}
 \engtxt{Okra}
@@ -1348,7 +1335,7 @@
 \end{element}
 
 \begin{element}
-\setimg{pea.jpg}{Pisum sativum}{GFDL}
+\setimg{pea.jpg}{\href{http://commons.wikimedia.org/wiki/User:Rasbak}{Pisum sativum}}{cc-by-sa-3.0}{Peultjes_peultjes_Pisum_sativum_mange-tout.jpg}
 \artxt{بازلاء}
 \japtxt{豌豆(えんどう)}
 \engtxt{Pea}
@@ -1365,7 +1352,7 @@
 \imgdir{plants/veg-bulb/}
 
 \begin{element}
-\setimg{asparagus.jpg}{Evan-Amos}{CC-BY-SA-3}
+\setimg{asparagus.jpg}{\href{http://commons.wikimedia.org/wiki/User:Evan-Amos}{Evan-Amos}}{cc-by-sa-3.0}{Asparagus-Bundle.jpg}
 \artxt{هليون}
 \japtxt{アスパラガス}
 \engtxt{Asparagus}
@@ -1373,15 +1360,15 @@
 \end{element}
 
 \begin{element}
-\setimg{cardoon.jpg}{Tony Esopi}{CC-BY-SA-2.5}
+\setimg{cardoon.jpg}{\href{http://commons.wikimedia.org/wiki/User:Tonyesopi}{Tony Esopi}}{cc-by-sa-3.0}{Aginara.jpg}
 \artxt{خرشوف -ساق-}
 \japtxt{カルドン}
 \engtxt{Cardoon}
 \frtxt{Cardon}
 \end{element}
 
-\begin{element}
-\setimg{celery.jpg}{Popolon}{GFDL}
+\begin{element} 
+\setimg{celery.jpg}{\href{http://commons.wikimedia.org/wiki/User:Popolon}{Popolon}}{cc-by-sa-3.0}{C\%C3\%A9leri.jpg}
 \artxt{كرفس}
 \japtxt{セロリ}
 \engtxt{Celery}
@@ -1389,7 +1376,7 @@
 \end{element}
 
 \begin{element}
-\setimg{fennel.jpg}{Arnaud 25}{public}
+\setimg{fennel.jpg}{\href{http://commons.wikimedia.org/wiki/User:Arnaud_25}{Arnaud 25}}{public}{Fenouil.jpg}
 \artxt{شمار (بسباس)}
 \japtxt{フェンネル}
 \engtxt{Fennel}
@@ -1397,7 +1384,7 @@
 \end{element}
 
 \begin{element}
-\setimg{garlic.jpg}{Pivari}{CC-BY-SA-3}
+\setimg{garlic.jpg}{\href{http://commons.wikimedia.org/wiki/User:Pivari}{Pivari}}{cc-by-sa-3.0}{Italian_garlic_PDO.JPG}
 \artxt{ثوم}
 \japtxt{大蒜(にんにく)}
 \engtxt{Garlic}
@@ -1405,17 +1392,15 @@
 \end{element}
 
 \begin{element}
-\setimg{kohlrabi.jpg}{Tarunpant}{CC-BY-SA-3}
+\setimg{kohlrabi.jpg}{Tarunpant}{cc-by-sa-3.0}{Kohlrabi_against_an_exotic_cushion,_Gurgaon,Haryana.jpg}
 \artxt{كرنب ساقي}
 \japtxt{コールラビ}
 \engtxt{Kohlrabi}
 \frtxt{Chou-rave}
 \end{element}
 
-%TODO Cymbopogon: Put it or not?
-
 \begin{element}
-\setimg{leek.jpg}{Biso}{public}
+\setimg{leek.jpg}{\href{http://commons.wikimedia.org/wiki/User:Biso}{Biso}}{public}{Leeks_bg.JPG}
 \artxt{كراث}
 \japtxt{リーキ}
 \engtxt{Leek}
@@ -1423,7 +1408,7 @@
 \end{element}
 
 \begin{element}
-\setimg{lotusroot.jpg}{FotoosRobin}{CC-BY-SA-2}
+\setimg{lotusroot.jpg}{\href{http://flickr.com/photos/63637139@N00}{FotoosRobin}}{cc-by-sa-2.0}{Lotus_root.jpg}
 \artxt{جذر اللوتس}
 \japtxt{蓮(はす)}
 \engtxt{Lotus root}
@@ -1431,7 +1416,7 @@
 \end{element}
 
 \begin{element}
-\setimg{onion.jpg}{Kirechko}{public}
+\setimg{onion.jpg}{\href{http://en.wikipedia.org/wiki/ru:User:Kirechko}{Kirechko}}{public}{Alliumcepa.JPG}
 \artxt{بصل}
 \japtxt{玉葱(たまねぎ)}
 \engtxt{Onion}
@@ -1439,8 +1424,8 @@
 \end{element}
 
 \begin{element}
-\setimg{scallion.jpg}{Donovan Govan}{GFDL}
-\artxt{البصل الاخضر}
+\setimg{scallion.jpg}{\href{http://commons.wikimedia.org/wiki/User:Geocachernemesis}{Donovan Govan}}{cc-by-sa-3.0}{Spring_Onion.jpg}
+\artxt{البصل الأخضر}
 \japtxt{分葱(わけぎ)}
 \engtxt{Scallion (Spring onion)}
 \frtxt{Oignon vert}
@@ -1456,7 +1441,7 @@
 \imgdir{plants/veg-root/}
 
 \begin{element}
-\setimg{beetroot.jpg}{Ramesh NG}{CC-BY-SA-2}
+\setimg{beetroot.jpg}{\href{http://www.flickr.com/people/39107352@N08}{Ramesh NG}}{cc-by-sa-2.0}{Beetroot_on_plate.jpg}
 \artxt{شمندر}
 \japtxt{テーブルビート}
 \engtxt{Beetroot}
@@ -1464,7 +1449,7 @@
 \end{element}
 
 \begin{element}
-\setimg{carrot.jpg}{4028mdk09}{CC-BY-SA-3}
+\setimg{carrot.jpg}{\href{http://commons.wikimedia.org/wiki/User:4028mdk09}{4028mdk09}}{cc-by-sa-3.0}{Karotten.JPG}
 \artxt{جزر}
 \japtxt{人参(にんじん)}
 \engtxt{Carrot}
@@ -1472,7 +1457,7 @@
 \end{element}
 
 \begin{element}
-\setimg{cassava.jpg}{David Monniaux}{CC-BY-SA-2}
+\setimg{cassava.jpg}{\href{http://commons.wikimedia.org/wiki/User:David.Monniaux}{David Monniaux}}{cc-by-sa-3.0}{Manihot_esculenta_dsc07325.jpg}
 \artxt{كاسافا}
 \japtxt{キャッサバ}
 \engtxt{Cassava}
@@ -1480,7 +1465,7 @@
 \end{element}
 
 \begin{element}
-\setimg{ginger.jpg}{Frank C. M\"uller}{CC-BY-SA-3}
+\setimg{ginger.jpg}{\href{http://commons.wikimedia.org/wiki/User:Frank_C._M\%C3\%BCller}{Frank C. M\"uller}}{cc-by-sa-3.0}{Ingwer_2_fcm.jpg}
 \artxt{زنجبيل}
 \japtxt{生姜(しょうが)}
 \engtxt{Ginger}
@@ -1488,7 +1473,7 @@
 \end{element}
 
 \begin{element}
-\setimg{daikon.jpg}{Thamizhpparithi Maari}{CC-BY-SA-3}
+\setimg{daikon.jpg}{\href{http://commons.wikimedia.org/wiki/User:Thamizhpparithi_Maari}{Thamizhpparithi Maari}}{cc-by-sa-3.0}{A_aesthetic_radish.JPG}
 \artxt{دايكون}
 \japtxt{大根(だいこん)}
 \engtxt{Daikon}
@@ -1496,7 +1481,7 @@
 \end{element}
 
 \begin{element}
-\setimg{horseradish.jpg}{Anna reg}{CC-BY-SA-3}
+\setimg{horseradish.jpg}{\href{http://commons.wikimedia.org/wiki/User:Anna_reg}{Anna reg}}{cc-by-sa-3.0}{Kren_Verkauf.jpg}
 \artxt{فجل الخيل الريفي}
 \japtxt{ホースラディッシュ}
 \engtxt{Horseradish}
@@ -1504,7 +1489,7 @@
 \end{element}
 
 \begin{element}
-\setimg{potato.jpg}{ZooFari}{public}
+\setimg{potato.jpg}{\href{http://commons.wikimedia.org/wiki/User:ZooFari}{ZooFari}}{public}{Russet_potato_cultivar_with_sprouts.jpg}
 \artxt{بطاطس}
 \japtxt{じゃがいも}
 \engtxt{Potato}
@@ -1512,7 +1497,7 @@
 \end{element}
 
 \begin{element}
-\setimg{radish.jpg}{Jengod}{CC-BY-SA-3}
+\setimg{radish.jpg}{\href{http://commons.wikimedia.org/wiki/User:Jengod}{Jengod}}{cc-by-sa-3.0}{Radish_3371103037_4ab07db0bf_o.jpg}
 \artxt{فجل}
 \japtxt{ラディッシュ}
 \engtxt{Radish}
@@ -1520,7 +1505,7 @@
 \end{element}
 
 \begin{element}
-\setimg{sweetpotato.jpg}{Llez}{CC-BY-SA-3}
+\setimg{sweetpotato.jpg}{\href{http://commons.wikimedia.org/wiki/User:Llez}{H. Zell}}{cc-by-sa-3.0}{Ipomoea_batatas_006.JPG}
 \artxt{بطاطا حلوة}
 \japtxt{薩摩芋(さつまいも)}
 \engtxt{Sweet potato}
@@ -1528,7 +1513,7 @@
 \end{element}
 
 \begin{element}
-\setimg{taro.jpg}{Namazu-tron}{CC-BY-SA-3}
+\setimg{taro.jpg}{\href{http://commons.wikimedia.org/wiki/User:Yongxinge}{Yongxinge}}{cc-by-sa-3.0}{Taro_corms_2.jpg}
 \artxt{قلقاس}
 \japtxt{タロ芋(いも)}
 \engtxt{Taro}
@@ -1536,7 +1521,7 @@
 \end{element}
 
 \begin{element}
-\setimg{tigernut.jpg}{Tamorlan}{CC-BY-SA-3}
+\setimg{tigernut.jpg}{\href{http://commons.wikimedia.org/wiki/User:Tamorlan}{Tamorlan}}{cc-by-sa-3.0}{Cyperus_esculentus_-Chufas.JPG}
 \artxt{حب العزيز}
 \japtxt{ショクヨウガヤツリ}
 \engtxt{Tigernut}
@@ -1544,7 +1529,7 @@
 \end{element}
 
 \begin{element}
-\setimg{turnip.jpg}{thebittenword.com}{CC-BY-2}
+\setimg{turnip.jpg}{\href{http://www.flickr.com/photos/galant/2622027467/}{thebittenword.com}}{cc-by-2.0}{Turnip_2622027.jpg}
 \artxt{لفت}
 \japtxt{蕪(かぶ)}
 \engtxt{Turnip}
@@ -1566,13 +1551,15 @@
 %\printindex[ar]
 %}
 
-%\backmatter
-\pagenumbering{gobble}
+\backmatter
 
-\newpage
-\hrule
-Pictures' credits:\\
-\authorsthanks
+{\scriptsize \authorsthanks}
+
+All modified pictures are under the license CC-BY-SA-3.0. 
+To see pictures original licenses (which could be: public, CC0, CC-BY, CC-BY-SA), follow the links above (More info).
+
+To get more information about Creative Commons licenses, follow this link: \url{http://creativecommons.org/licenses/}
 
 \input{thanks}
+
 \end{document}
