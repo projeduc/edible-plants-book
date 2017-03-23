@@ -1,8 +1,8 @@
 # Edible Plants book
 
-[![Project](https://img.shields.io/badge/Project-Edible_Plants-0014A8.svg?style=plastic)](http://ararud.sourceforge.net)
-[![Version](https://img.shields.io/badge/Version-1.0.0-0014A8.svg?style=plastic)](https://github.com/kariminf/ArArud/releases)
-[![License](https://img.shields.io/badge/License-GPL_3.0-0014A8.svg?style=plastic)](http://www.apache.org/licenses/LICENSE-2.0)
+[![Project](https://img.shields.io/badge/Project-Edible_Plants-0014A8.svg?style=plastic)](https://github.com/kariminf/EdiblePlants-book)
+[![Version](https://img.shields.io/badge/Version-1.0.0-0014A8.svg?style=plastic)](https://github.com/kariminf/EdiblePlants-book/releases)
+[![License](https://img.shields.io/badge/License-GPL_3.0-0014A8.svg?style=plastic)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 A book designed to present different Edible plants classed as fruits, vegetables, cereals, etc.
 
